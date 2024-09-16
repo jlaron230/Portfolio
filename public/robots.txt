@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://jeromegavinodev.com/
+
+# Sitemaps
+Sitemap: https://jeromegavinodev.com/sitemap.xml
