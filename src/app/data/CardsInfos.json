@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "title": "Design",
+    "description": "Création, design et publicité",
+    "imageSrc": "images/AfficheBook_1-20.jpg",
+    "modalTitle": "Graphisme",
+    "modalDescription": "Création de votre identité graphique (logo, dépliant, flyer, affiche, brochure...), pour la communication de votre entreprise.",
+    "modalIcons": [
+      "/images/Logos/Figma.png",
+      "/images/Logos/Première.png",
+      "/images/Logos/Indesign.png",
+      "/images/Logos/Illustrator.png",
+      "/images/Logos/PhotoshopLogo.png"
+    ],
+    "color": "txt_colorSkill2"
+  },
+  {
+    "id": 2,
+    "title": "Site web",
+    "description": "Recherche, Développement, déploiement",
+    "imageSrc": "images/Ordinateur-Adami.jpg",
+    "modalTitle": "Développement web",
+    "modalDescription": "Un site internet qui correspond à votre image et vos besoins.",
+    "modalIcons": [
+      "/images/Logos/Html.png",
+      "/images/Logos/Css.png",
+      "/images/Logos/Javascript.png",
+      "/images/Logos/NodeJs.png",
+      "/images/Logos/SQL.png",
+      "/images/Logos/React.png",
+      "/images/Logos/Wordpress.png"
+    ],
+    "color": "txt_colorSecondary"
+  },
+  {
+    "id": 3,
+    "title": "Jeux vidéos",
+    "description": "Conception, développement, test",
+    "imageSrc": "images/Homme-Ordinateur-unity.jpg",
+    "modalTitle": "Développement jeux vidéos",
+    "modalDescription": "Mini-jeux pour votre site web/application afin de vous démarquer",
+    "modalIcons": [
+      "/images/Logos/Sharp.png",
+      "/images/Logos/Unity.png",
+      "/images/Logos/Javascript.png"
+    ],
+    "color": "txt_colorSkill1"
+  },
+  {
+    "id": 4,
+    "title": "Impression 3D",
+    "description": "Modélisation, impression",
+    "imageSrc": "images/Impression3D.jpg",
+    "modalTitle": "Impression 3D",
+    "modalDescription": "Modélisation et impression de vos pièces en 3D",
+    "modalIcons": ["/images/Logos/Cura.png", "/images/Logos/Fusion360.png"],
+    "color": "txt_colorPrimary"
+  },
+  {
+    "id": 5,
+    "title": "Informatique",
+    "description": "Réparation, dépannage, conseils.",
+    "imageSrc": "images/DisqueDur.jpg",
+    "modalTitle": "Informatique",
+    "modalDescription": "Dépannage, réparation et installation de votre matériel informatique",
+    "modalIcons": [
+      "/images/Logos/Windows.png",
+      "/images/Logos/Apple.png",
+      "/images/Logos/Linux.png",
+      "/images/Logos/Ordinateur.png",
+      "/images/Logos/Imprimante.png"
+    ],
+    "color": "txt_colorblack"
+  }
+]

@@ -1,0 +1,372 @@
+/* titillium-web-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../app/assets/fonts/titillium-web-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* titillium-web-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../app/assets/fonts/titillium-web-v17-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* orbitron-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../app/assets/fonts/orbitron-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+
+  --primaryColor: #7086FE;
+  --secondaryColor: #111AF1;
+  --colorSkill: #33C0D3;
+  --colorSkill2: #F43753;
+  --white: #FFFFFF;
+  --black: #000000;
+  --transparentBlack: #0000002b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700; /* Correspond à la définition de @font-face */
+  font-style: normal;
+}
+
+.font_container {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700; /* Correspond à la définition de @font-face */
+  font-style: normal;
+  font-size: 24px;
+}
+
+
+p{
+  overflow-wrap: break-word;
+}
+h2{
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700; /* Correspond à la définition de @font-face */
+  font-style: normal;
+  font-size: 3rem;
+}
+
+.projet_font {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700; /* Correspond à la définition de @font-face */
+  font-style: normal;
+  font-size: 1.7rem;
+}
+
+h1,
+h3,
+h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700; /* Correspond à la définition de @font-face */
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+.colorPrimary {
+  background-color: var(--primaryColor);
+}
+.colorSecondary {
+  background-color: var(--secondaryColor);
+}
+.colorSkill1 {
+  background-color: var(--colorSkill);
+}
+.colorSkill2 {
+  background-color: var(--colorSkill2);
+}
+.white {
+  background-color: var(--white);
+}
+.black {
+  background-color: var(--black);
+}
+.transparentBlack {
+  background-color: var(--transparentBlack);
+}
+
+.txt_colorPrimary{
+  color: var(--primaryColor);
+}
+.txt_colorSecondary{
+  color: var(--secondaryColor);
+}
+.txt_colorSkill1{
+  color: var(--colorSkill);
+}
+.txt_colorSkill2{
+  color: var(--colorSkill2);
+}
+.txt_colorwhite {
+  color: var(--white);
+}
+.txt_colorblack{
+  color: var(--black);
+}
+.txt_colortransparentBlack{
+  color: var(--transparentBlack);
+}
+
+.styleAccordion{
+  color: var(--secondaryColor);
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero_font_title {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700; /* Correspond à la définition de @font-face */
+  font-style: normal;
+}
+
+.hero_font_title_orbitron {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 600;
+}
+
+.scrollbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 0;
+  opacity: 0;
+  background: linear-gradient(to top, var(--secondaryColor), var(--secondaryColor));
+  z-index: 10;
+}
+.clickScrollbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 100%;
+  background: rgba(170,170,170,0.356);
+  z-index: 50;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+
+
+/* Hero.css */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) 0s 4;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1) translateY(0); /* Déplacement initial */
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05) translateY(-10px); /* Déplacement au milieu du cycle */
+  }
+}
+
+
+
+.hero-container_txt {
+font-size: 1.7rem!important;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-background {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the container without stretching */
+  filter: brightness(0.5);
+}
+
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ffffff;
+  pointer-events: auto;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-container_txt-spaceX1 {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background-color: var(--secondaryColor);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-size: 0.8rem;
+  }
+  
+  button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Styles CSS pour l'effet de frappe */
+@keyframes typing {
+  from { width: 20%; height:0%;}
+  to { width: 50%;height:0%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+
+}
+
+/* Animation d'écriture pour le texte */
+.typing-effect {
+  display: inline-block;
+  white-space: wrap;
+  overflow: hidden;
+  border-right: .2em solid rgba(255, 255, 255, 0.75); /* Caret */
+  animation: typing 2.2s steps(60, end), blink-caret .3s step-end infinite;
+}
+
+/* Animation d'apparition latérale */
+.slide-in {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+

@@ -1,0 +1,35 @@
+[
+  {
+    "Slider1": [
+      "/images/DeadlineDrive/DeadlineDrive4.jpg",
+      "/images/DeadlineDrive/DeadlineDrive2.png",
+      "/images/DeadlineDrive/DeadlineDrive3.png",
+      "/images/DeadlineDrive/DeadlineDrive1.png",
+      "/images/DeadlineDrive/DeadlineDrive5.png"
+    ]
+  },
+  {
+    "Slider2": [
+      "/images/Adami/Adami-Capture.jpg",
+      "/images/Adami/Adami-Capture2.jpg",
+      "/images/Adami/Adami-Capture3.jpg",
+      "/images/Adami/Adami-Capture4.jpg",
+      "/images/Adami/Adami-Capture5.jpg"
+    ]
+  },
+  {
+    "Slider3": [
+      "/images/LePanchaKarma/LePanchaKarmaCapture1.png",
+      "/images/LePanchakarma/LePanchakarmaCapture2.png",
+      "/images/LePanchakarma/LePanchakarmaCapture3.png",
+      "/images/LePanchakarma/LePanchakarmaCapture4.png"
+    ]
+  },
+  {
+    "Slider4": [
+      "https://nextui-docs-v2.vercel.app/images/fruit-3.jpeg",
+      "https://nextui-docs-v2.vercel.app/images/fruit-3.jpeg",
+      "https://nextui-docs-v2.vercel.app/images/fruit-3.jpeg"
+    ]
+  }
+]
