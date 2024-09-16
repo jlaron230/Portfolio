@@ -113,7 +113,8 @@ const Footer = () => {
       <div className="flex justify-center pb-12">
         <h2>Contactez-moi</h2>
       </div>
-      <form onSubmit={formik.handleSubmit} className="sm:w-6/12 lg:w-4/12 max-sm:w-full">
+      <form   action="https://formspree.io/f/mnnaywbp"
+  method="POST" onSubmit={formik.handleSubmit} className="sm:w-6/12 lg:w-4/12 max-sm:w-full">
         <motion.div
           initial={{ opacity: 0, scale: 1, x: 0, y: 30 }}
           whileInView={{ opacity: 1, x: 0, y: 0 }}
