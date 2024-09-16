@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@eslint/config-array": "^0.18.0",
@@ -20,12 +21,14 @@
     "@nextui-org/navbar": "^2.0.36",
     "@nextui-org/react": "^2.4.6",
     "@tsparticles/react": "^3.0.0",
+    "@vercel/speed-insights": "^1.0.12",
     "axios": "^1.7.7",
     "formik": "^2.4.6",
     "framer-motion": "^11.3.30",
     "glob": "^11.0.0",
     "heroicons": "^2.1.5",
     "next": "14.2.6",
+    "next-sitemap": "^4.2.3",
     "react": "^18",
     "react-dom": "^18",
     "react-tsparticles": "^2.12.2",
