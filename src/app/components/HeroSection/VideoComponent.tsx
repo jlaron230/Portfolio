@@ -11,7 +11,7 @@ const VideoComponent = () => {
       width="100%"
       height="auto"
     >
-      <source src="/videos/vecteezy_futuristic-threshold.mp4" type="video/mp4" />
+      <source src="/videos/vecteezy_futuristic-threshold-with-reflections-on-wall-and-floor_2016010.mov" type="video/mp4" />
         Vidéo futuristique en perspective
     </video>
   );
