@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";  // Importation de la bibliothèque pour ajouter des animations.
 
 const SectionApropos = () => {
-  const images: string[] = ["images/w1000-1133478AE9sXs77.jpg"];  // Tableau contenant l'URL de l'image.
+  const images: string[] = ["images/w1000-1133478AE9sXs77.webp"];  // Tableau contenant l'URL de l'image.
 
   return (
     <div className="flex flex-col items-center justify-center">  

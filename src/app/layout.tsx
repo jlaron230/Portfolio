@@ -27,7 +27,7 @@ export default function RootLayout({
         <meta name="author" content="Jérôme Gavino" />
         <meta
           property="og:image"
-          content="images/w1000-1133478AE9sXs77.jpg"
+          content="images/w1000-1133478AE9sXs77.webp"
         />
         <meta
           property="og:description"

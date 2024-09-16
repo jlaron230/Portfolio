@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Design",
     "description": "Création, design et publicité",
-    "imageSrc": "images/AfficheBook_1-20.jpg",
+    "imageSrc": "images/AfficheBook_1-20.webp",
     "modalTitle": "Graphisme",
     "modalDescription": "Création de votre identité graphique (logo, dépliant, flyer, affiche, brochure...), pour la communication de votre entreprise.",
     "modalIcons": [
@@ -19,7 +19,7 @@
     "id": 2,
     "title": "Site web",
     "description": "Recherche, Développement, déploiement",
-    "imageSrc": "images/Ordinateur-Adami.jpg",
+    "imageSrc": "images/Ordinateur-Adami.webp",
     "modalTitle": "Développement web",
     "modalDescription": "Un site internet qui correspond à votre image et vos besoins.",
     "modalIcons": [
@@ -37,7 +37,7 @@
     "id": 3,
     "title": "Jeux vidéos",
     "description": "Conception, développement, test",
-    "imageSrc": "images/Homme-Ordinateur-unity.jpg",
+    "imageSrc": "images/Homme-Ordinateur-unity.webp",
     "modalTitle": "Développement jeux vidéos",
     "modalDescription": "Mini-jeux pour votre site web/application afin de vous démarquer",
     "modalIcons": [
@@ -51,7 +51,7 @@
     "id": 4,
     "title": "Impression 3D",
     "description": "Modélisation, impression",
-    "imageSrc": "images/Impression3D.jpg",
+    "imageSrc": "images/Impression3D.webp",
     "modalTitle": "Impression 3D",
     "modalDescription": "Modélisation et impression de vos pièces en 3D",
     "modalIcons": ["/images/Logos/Cura.png", "/images/Logos/Fusion360.png"],
@@ -61,7 +61,7 @@
     "id": 5,
     "title": "Informatique",
     "description": "Réparation, dépannage, conseils.",
-    "imageSrc": "images/DisqueDur.jpg",
+    "imageSrc": "images/DisqueDur.webp",
     "modalTitle": "Informatique",
     "modalDescription": "Dépannage, réparation et installation de votre matériel informatique",
     "modalIcons": [

@@ -58,7 +58,7 @@ const MedhylemmeComponent = () => {
         {/* Image animée */}
         <motion.img
           className="img"
-          src="./images/Medhylemme.png"
+          src="./images/Medhylemme.webp"
           drag="x" // Permet le glissement horizontal
           dragConstraints={{ left: 0, right: 0 }} // Contraintes de glissement horizontal
           animate={{ x: 0, opacity: 1 }} // Animation des propriétés

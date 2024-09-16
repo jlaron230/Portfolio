@@ -85,7 +85,7 @@ const Portfolio: React.FC = () => {
         page={page2}
         direction={direction2}
         paginate={(direction) => paginate(2, direction)}
-        imageSrc="/images/Adami/Adami-Capture5.jpg"
+        imageSrc="/images/Adami/Adami-Capture5.webp"
         noBackground={false}
         defilement={2}
         defilement2={-2}
@@ -105,7 +105,7 @@ const Portfolio: React.FC = () => {
         page={page3}
         direction={direction3}
         paginate={(direction) => paginate(3, direction)}
-        imageSrc={"/images/LePanchaKarma/LePanchakarmaCapture1.png"}
+        imageSrc={"/images/LePanchaKarma/LePanchakarmaCapture1.webp"}
         noBackground={true}
         defilement={3}
         defilement2={-3}
