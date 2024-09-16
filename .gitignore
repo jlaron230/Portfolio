@@ -7,7 +7,6 @@
 .yarn/install-state.gz
 
 .next/
-/public/videos/*
 # testing
 /coverage
 
