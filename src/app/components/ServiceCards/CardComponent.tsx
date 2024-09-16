@@ -50,6 +50,7 @@ const CardComponent: React.FC<cardInterface> = ({
           {/* Image de fond de la carte */}
           <div className="relative w-full h-[20rem] sm:h-[25rem] md:h-[26rem] lg:h-[19rem] xl:h-[18rem] bg-black">
             <motion.img
+            loading='lazy'
               alt="Card background" // Texte alternatif pour l'image
               className="z-0 absolute top-0 left-0 w-full h-full object-cover opacity-85"
               src={imageSrc} // Image source

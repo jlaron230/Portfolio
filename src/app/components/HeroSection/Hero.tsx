@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { EnvelopeIcon, ArrowDownTrayIcon } from "@heroicons/react/24/outline";
+import VideoComponent from "./VideoComponent";
 
 const Hero: React.FC = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
@@ -122,13 +123,7 @@ const Hero: React.FC = () => {
   return (
     <div id="Accueil" className="hero-container">
       <div className="background-video">
-        <video autoPlay muted loop className="video-background">
-          <source
-            src="/videos/vecteezy_futuristic-threshold-with-reflections-on-wall-and-floor_2016010.mov"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+      <VideoComponent />
       </div>
 
       <div id="particles-container" className="particles-container"></div>
