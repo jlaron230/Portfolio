@@ -13,6 +13,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/privacy-legacy/'],
       },
     ],
-    sitemap: 'https://jeromegavinodev.com/',
+    sitemap: 'https://jeromegavinodev.com/sitemap.xml',
   }
 }
