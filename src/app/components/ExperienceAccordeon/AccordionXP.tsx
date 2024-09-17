@@ -62,7 +62,7 @@ export default function AccordionXP() {
               {/* Informations liées à l'expérience */}
               <div className="flex flex-wrap justify-between">
                 <span className="txt_colorSecondary text-xl pb-3.5">
-                  <Link className="text-xl" href="https://www.oyopi.com/">Oyopi</Link> | Avril 2024 - Juin 2024
+                  <Link className="text-xl" aria-label="Lien vers l'agence web Oyopi de Digne-les-bains" href="https://www.oyopi.com/">Oyopi</Link> | Avril 2024 - Juin 2024
                 </span>
               </div>
               <p>
@@ -86,7 +86,7 @@ export default function AccordionXP() {
             >
               <div className="flex flex-wrap justify-between">
                 <span className="txt_colorSecondary text-xl pb-3.5">
-                  <Link className="text-xl" href="https://gamejolt.com/games/AdamiGame/851212">Projet personnel</Link> | 2024
+                  <Link className="text-xl" aria-label="Lien vers le site pour télécharger Adami, le jeu vidéo RPG Fantastique" href="https://gamejolt.com/games/AdamiGame/851212">Projet personnel</Link> | 2024
                 </span>
               </div>
               <p>
@@ -121,7 +121,7 @@ export default function AccordionXP() {
             >
               <div className="flex flex-wrap justify-between">
                 <span className="txt_colorSecondary text-xl pb-3.5">
-                  <Link className="text-xl" href="https://www.univ-amu.fr/fr">Aix Marseille Université</Link> | 2020 - 2022
+                  <Link className="text-xl" aria-label="Lien vers l'université d'Aix-Marseille" href="https://www.univ-amu.fr/fr">Aix Marseille Université</Link> | 2020 - 2022
                 </span>
               </div>
               <p>
@@ -142,7 +142,7 @@ export default function AccordionXP() {
             >
               <div className="flex flex-wrap justify-between">
                 <span className="txt_colorSecondary text-xl pb-3.5">
-                  <Link className="text-xl" href="https://powergeneration.mc/">Power Generation</Link> | février 2020 - août 2020
+                  <Link className="text-xl" aria-label="Lien vers l'agence signalétique de Monaco" href="https://powergeneration.mc/">Power Generation</Link> | février 2020 - août 2020
                 </span>
               </div>
               <p>

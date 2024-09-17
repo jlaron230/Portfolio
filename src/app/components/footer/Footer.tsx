@@ -219,16 +219,17 @@ const Footer = () => {
         </motion.div>
       </form>
       <div className="gap-6 flex mb-7 mt-7">
-        <SocialLink href="https://github.com/jlaron230" icon={faGithub} />
+        <SocialLink label="Lien vers mon Github pour visualiser mes projets" href="https://github.com/jlaron230" icon={faGithub} />
         <SocialLink
+          label="Lien vers mon Linkedin"
           href="https://www.linkedin.com/in/j%C3%A9r%C3%B4me-gavino-284a02b8/"
           icon={faLinkedin}
         />
-        <SocialLink href="https://x.com/ArtetCreation1" icon={faTwitter} />
+        <SocialLink label="Lien vers mon twitter" href="https://x.com/ArtetCreation1" icon={faTwitter} />
       </div>
       <div className="flex justify-center gap-3">
         <p className="text-base text-white">
-          <Link href="/privacy-legacy">Mentions légales</Link> - Copyright ©
+          <Link aria-label="Lien vers les mentions légales du site" href="/privacy-legacy">Mentions légales</Link> - Copyright ©
           2024 - Gavino Jérôme. All rights reserved.
         </p>
       </div>
@@ -242,13 +243,15 @@ export default Footer;
 interface SocialLinkProps {
   href: string;
   icon: any;
+  label: string;
 }
 
 // Composant pour les liens sociaux avec icônes
-const SocialLink: React.FC<SocialLinkProps> = ({ href, icon }) => (
+const SocialLink: React.FC<SocialLinkProps> = ({ href, icon, label }) => (
   <Link
     className="hover:scale-125 transition delay-150 duration-300"
     href={href}
+    aria-label={label}
     target="_blank"
     rel="noopener noreferrer"
   >

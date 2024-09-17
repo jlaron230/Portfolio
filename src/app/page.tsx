@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import Hero from "./components/HeroSection/Hero";
 import "./globals.css";
 // 1. import `NextUIProvider` component

@@ -4,7 +4,7 @@ import Portfolio from '../components/SliderSection/Portfolio'
 const Projet = () => {
   return (
     <div id='MesProjets'>
-    <Portfolio />
+    <Portfolio alt='Mes différents projets.' />
     </div>
   )
 }

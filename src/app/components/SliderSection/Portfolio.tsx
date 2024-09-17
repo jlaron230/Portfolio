@@ -10,7 +10,11 @@ interface SliderData {
   Slider3?: string[];
 }
 
-const Portfolio: React.FC = () => {
+interface alt {
+  alt: string;
+}
+
+const Portfolio: React.FC<alt> = ({alt}) => {
   // États pour gérer la page actuelle et la direction du slider pour chaque slider
   const [page1, setPage1] = useState<number>(0);
   const [direction1, setDirection1] = useState<number>(0);
@@ -72,6 +76,7 @@ const Portfolio: React.FC = () => {
         imageSrc="/images/DeadlineDrive/Logo-Deadlines-blanc.png"
         defilement={1}
         defilement2={-1}
+        alt={alt}
       />
 
       {/* Section pour le deuxième projet */}
@@ -89,6 +94,7 @@ const Portfolio: React.FC = () => {
         noBackground={false}
         defilement={2}
         defilement2={-2}
+        alt={alt}
       />
 
       {/* Composant pour le projet Medhylemme */}
@@ -109,6 +115,7 @@ const Portfolio: React.FC = () => {
         noBackground={true}
         defilement={3}
         defilement2={-3}
+        alt={alt}
       />
     </div>
   );

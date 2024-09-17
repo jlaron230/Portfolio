@@ -10,9 +10,10 @@ interface SliderProps {
   paginate: (direction: number) => void; // Fonction pour changer de page dans le slider
   defilement: number; // Variable pour les effets de défilement
   defilement2: number; // Variable pour les effets de défilement secondaire
+  alt: string;
 }
 
-const Slider: React.FC<SliderProps> = ({ images, page, direction, paginate, defilement, defilement2 }) => {
+const Slider: React.FC<SliderProps> = ({ images, page, direction, paginate, defilement, defilement2, alt }) => {
   return (
     <AnimatePresence initial={true} custom={direction}>
       {/* Conteneur pour les images du slider */}
@@ -35,6 +36,7 @@ const Slider: React.FC<SliderProps> = ({ images, page, direction, paginate, defi
             className="img"
             key={page} // Clé unique pour l'image actuelle
             src={images[page]} // Source de l'image actuelle
+            alt={alt}
             drag="x" // Permet de faire glisser l'image horizontalement
             dragConstraints={{ left: 0, right: 0 }} // Contraintes pour le glissement
             animate={{ x: 0, opacity: 1 }} // Animation pour l'image

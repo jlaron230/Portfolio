@@ -25,7 +25,7 @@ const Cards = () => {
       {/* Grille d'affichage des cartes avec une configuration réactive */}
       <div className="max-w-[900px] gap-2 grid lg:grid-cols-12 sm:grid-cols-8 grid-rows-2 mr-auto ml-auto">
         {/* Parcours des données des cartes depuis CardsInfos.json */}
-        {CardsInfos.map(({ id, title, description, imageSrc, modalTitle, modalDescription, modalIcons, color }) => (
+        {CardsInfos.map(({ id, title, description, imageSrc, modalTitle, modalDescription, modalIcons, color, baliseAlt }) => (
           <CardComponent
             key={id} // Clé unique pour chaque carte
             id={id}
@@ -39,6 +39,7 @@ const Cards = () => {
             handleShowModal={handleShowModal} // Passe la fonction de gestion de modal
             currentCard={currentCard} // Passe la carte actuelle sélectionnée
             color={color}
+            baliseAlt={baliseAlt}
           />
         ))}
       </div>

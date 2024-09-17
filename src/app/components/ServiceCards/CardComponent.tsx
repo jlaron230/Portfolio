@@ -16,11 +16,12 @@ interface cardInterface {
   currentCard: number | null; // Permet de savoir quelle carte est actuellement ouverte
   color: string;
   modalDescription: string;
+  baliseAlt: string;
 }
 
 // Composant de chaque carte individuelle
 const CardComponent: React.FC<cardInterface> = ({
-  id, title, description, imageSrc, modalTitle, modalDescription, modalIcons, showModal, handleShowModal, currentCard, color 
+  id, title, description, imageSrc, modalTitle, modalDescription, modalIcons, showModal, handleShowModal, currentCard, color, baliseAlt 
 }) => {
   return (
     <motion.div
@@ -51,7 +52,7 @@ const CardComponent: React.FC<cardInterface> = ({
           <div className="relative w-full h-[20rem] sm:h-[25rem] md:h-[26rem] lg:h-[19rem] xl:h-[18rem] bg-black">
             <motion.img
             loading='lazy'
-              alt="Card background" // Texte alternatif pour l'image
+              alt={baliseAlt} // Texte alternatif pour l'image
               className="z-0 absolute top-0 left-0 w-full h-full object-cover opacity-85"
               src={imageSrc} // Image source
             />

@@ -136,7 +136,7 @@ const Hero: React.FC = () => {
           Développeur Full-Stack
         </h1>
         <div className="flex items-center gap-4 sm:flex-row max-sm:flex-col mt-4">
-          <button onClick={link} className="btn flex items-center gap-2">
+          <button aria-label="Contactez-moi par email" onClick={link} className="btn flex items-center gap-2">
             Me contacter <EnvelopeIcon className="w-5" />
           </button>
           <a

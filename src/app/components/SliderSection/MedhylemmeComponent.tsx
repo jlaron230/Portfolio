@@ -27,6 +27,7 @@ const MedhylemmeComponent = () => {
             showAnchorIcon
             variant="solid"
             className="mt-2 colorSecondary text-white z-10"
+            aria-label='Le site de medhylemme'
           >
             Le projet
           </Button>
@@ -59,6 +60,7 @@ const MedhylemmeComponent = () => {
         <motion.img
           className="img"
           src="./images/Medhylemme.webp"
+          alt='Medhylemme, un site de dilemme et de fun. '
           drag="x" // Permet le glissement horizontal
           dragConstraints={{ left: 0, right: 0 }} // Contraintes de glissement horizontal
           animate={{ x: 0, opacity: 1 }} // Animation des propriétés

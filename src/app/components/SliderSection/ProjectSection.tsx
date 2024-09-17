@@ -18,6 +18,7 @@ interface SectionType {
   index: number; // Index du projet (pour la disposition)
   defilement: number; // Variable pour les effets de défilement
   defilement2: number; // Variable pour les effets de défilement secondaire
+  alt: string;
 }
 
 const ProjectSection: React.FC<SectionType> = ({
@@ -34,6 +35,7 @@ const ProjectSection: React.FC<SectionType> = ({
   index,
   defilement,
   defilement2,
+  alt,
 }) => {
   // Détermine la direction de l'affichage des projets (pour alterner les positions)
   const returnProject = index % 2 === 0;
@@ -83,6 +85,7 @@ const ProjectSection: React.FC<SectionType> = ({
       {/* Composant Slider pour afficher les images */}
       <Slider
         images={images}
+        alt={alt}
         page={page}
         direction={direction}
         paginate={paginate}

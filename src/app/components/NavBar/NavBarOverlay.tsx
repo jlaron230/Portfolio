@@ -58,27 +58,27 @@ const NavBarOverlay = () => {
           {/* Contenu du navbar pour les petits écrans - marque du navbar */}
           <NavbarContent className="sm:hidden pr-3" justify="center">
             <NavbarBrand>
-              <p className="font-bold text-inherit">JR</p> {/* Nom ou logo de la marque */}
+              <p className="font-bold text-inherit">JG</p> {/* Nom ou logo de la marque */}
             </NavbarBrand>
           </NavbarContent>
 
           {/* Contenu du navbar pour les grands écrans - éléments de menu */}
           <NavbarContent className="hidden sm:flex gap-4" justify="center">
-            <NavbarBrand>
-              <p className="font-bold text-inherit">JR</p> {/* Nom ou logo de la marque */}
+            <NavbarBrand aria-label="Page d'accueil">
+              <p className="font-bold text-inherit">JG</p> {/* Nom ou logo de la marque */}
             </NavbarBrand>
             <NavbarItem>
-              <Link color="foreground" href="/#service">
+              <Link aria-label="Page mes services" color="foreground" href="/#service">
               Services
               </Link>
             </NavbarItem>
             <NavbarItem isActive>
-              <Link href="/#MesProjets" aria-current="page">
+              <Link aria-label="Page vers mes projets" href="/#MesProjets" aria-current="page">
               Mes projets
               </Link>
             </NavbarItem>
             <NavbarItem>
-              <Link color="foreground" href="/#Experience">
+              <Link aria-label="Page sur mes expériences" color="foreground" href="/#Experience">
               Experience
               </Link>
             </NavbarItem>
@@ -87,7 +87,7 @@ const NavBarOverlay = () => {
           {/* Contenu du navbar pour les grands écrans - actions de la barre de navigation */}
           <NavbarContent justify="end">
             <NavbarItem className="hidden lg:flex">
-              <Link href="/#APropos">À propos</Link>
+              <Link aria-label="Page à propos de moi" href="/#APropos">À propos</Link>
             </NavbarItem>
             <NavbarItem>
               <Button
@@ -95,6 +95,7 @@ const NavBarOverlay = () => {
                 className="colorSecondary text-white"
                 href="#Contact"
                 variant="flat"
+                aria-label="Contactez-moi via le formulaire de contact"
               >
                 Contact
               </Button>
@@ -104,16 +105,16 @@ const NavBarOverlay = () => {
           {/* Menu déroulant pour les petits écrans */}
           <NavbarMenu className="bg-white flex flex-wrap">
               <NavbarMenuItem className="flex flex-wrap flex-col">
-              <Link color="foreground" href="/#service">
+              <Link aria-label="Page mes services" color="foreground" href="/#service">
               Services
               </Link>
-              <Link href="/#MesProjets" aria-current="page">
+              <Link aria-label="Page vers mes projets" href="/#MesProjets" aria-current="page">
               Mes projets
               </Link>
-              <Link color="foreground" href="/#Experience">
+              <Link aria-label="Page sur mes expériences" color="foreground" href="/#Experience">
               Experience
               </Link>
-              <Link href="/#APropos">À propos</Link>
+              <Link aria-label="Page à propos de moi" href="/#APropos">À propos</Link>
               </NavbarMenuItem>
 
           </NavbarMenu>

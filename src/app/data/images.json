@@ -6,7 +6,8 @@
       "/images/DeadlineDrive/DeadlineDrive3.webp",
       "/images/DeadlineDrive/DeadlineDrive1.webp",
       "/images/DeadlineDrive/DeadlineDrive5.webp"
-    ]
+    ],
+    "alt": "Slider sur le projet web deadline drive, un site d'inspiration et de deadline"
   },
   {
     "Slider2": [
@@ -15,7 +16,8 @@
       "/images/Adami/Adami-Capture3.webp",
       "/images/Adami/Adami-Capture4.webp",
       "/images/Adami/Adami-Capture5.webp"
-    ]
+    ],
+    "alt": "slider sur un jeu vidéo RPG fantastique à la première personne"
   },
   {
     "Slider3": [
@@ -23,13 +25,15 @@
       "/images/Panchakarma/panchakarma2.webp",
       "/images/Panchakarma/panchakarma3.webp",
       "/images/Panchakarma/panchakarma4.webp"
-    ]
+    ],
+        "alt": "slider sur un site web d'une masseuse ayurvédique"
   },
   {
     "Slider4": [
       "https://nextui-docs-v2.vercel.app/images/fruit-3.jpeg",
       "https://nextui-docs-v2.vercel.app/images/fruit-3.jpeg",
       "https://nextui-docs-v2.vercel.app/images/fruit-3.jpeg"
-    ]
+    ],
+        "alt": "1"
   }
 ]

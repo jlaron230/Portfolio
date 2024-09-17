@@ -13,27 +13,27 @@ const NavBarDesktop = () => {
     // Menu mobile en utilisant la librairie de NextUI
     <Navbar isBordered className="bg-white">
       <NavbarBrand>
-        <Link href="/">
-          <p className="font-bold text-inherit">JR</p>
+        <Link aria-label="Page d'accueil" href="/">
+          <p className="font-bold text-inherit">JG</p>
         </Link>
       </NavbarBrand>
       <NavbarItem>
-        <Link color="foreground" href="/#service">
+        <Link aria-label="Page mes services" color="foreground" href="/#service">
           Services
         </Link>
       </NavbarItem>
       <NavbarItem>
-        <Link href="/#MesProjets" color="foreground">
+        <Link aria-label="Page vers mes projets" href="/#MesProjets" color="foreground">
           Mes projets
         </Link>
       </NavbarItem>
       <NavbarItem>
-        <Link className="grow-0" href="/#Experience" color="foreground">
+        <Link aria-label="Page sur mes expériences" className="grow-0" href="/#Experience" color="foreground">
           Experience
         </Link>
       </NavbarItem>
       <NavbarItem>
-        <Link color="foreground" href="/#APropos">
+        <Link aria-label="Page à propos de moi" color="foreground" href="/#APropos">
           À propos
         </Link>
       </NavbarItem>
@@ -44,6 +44,7 @@ const NavBarDesktop = () => {
             className="colorSecondary text-white grow-0"
             href="#Contact"
             variant="flat"
+            aria-label="Contactez-moi via le formulaire de contact"
           >
             Contact
           </Button>

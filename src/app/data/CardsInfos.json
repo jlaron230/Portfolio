@@ -13,7 +13,8 @@
       "/images/Logos/Illustrator.png",
       "/images/Logos/PhotoshopLogo.png"
     ],
-    "color": "txt_colorSkill2"
+    "color": "txt_colorSkill2",
+    "baliseAlt": "mise en situation d'une affiche dans un bureau"
   },
   {
     "id": 2,
@@ -31,7 +32,8 @@
       "/images/Logos/React.png",
       "/images/Logos/Wordpress.png"
     ],
-    "color": "txt_colorSecondary"
+    "color": "txt_colorSecondary",
+    "baliseAlt": "Homme qui travaille sur son ordinateur"
   },
   {
     "id": 3,
@@ -45,7 +47,8 @@
       "/images/Logos/Unity.png",
       "/images/Logos/Javascript.png"
     ],
-    "color": "txt_colorSkill1"
+    "color": "txt_colorSkill1",
+    "baliseAlt": "Un homme devant un ordinateur entrain de travailler"
   },
   {
     "id": 4,
@@ -55,7 +58,8 @@
     "modalTitle": "Impression 3D",
     "modalDescription": "Modélisation et impression de vos pièces en 3D",
     "modalIcons": ["/images/Logos/Cura.png", "/images/Logos/Fusion360.png"],
-    "color": "txt_colorPrimary"
+    "color": "txt_colorPrimary",
+    "baliseAlt": "une imprimante 3D avec des filaments"
   },
   {
     "id": 5,
@@ -71,6 +75,7 @@
       "/images/Logos/Ordinateur.png",
       "/images/Logos/Imprimante.png"
     ],
-    "color": "txt_colorblack"
+    "color": "txt_colorblack",
+    "baliseAlt": "Disque dur informatique"
   }
 ]
