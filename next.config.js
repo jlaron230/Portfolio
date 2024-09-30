@@ -1,5 +1,9 @@
 // next.config.js
 const TerserPlugin = require('terser-webpack-plugin');
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 
 module.exports = {
   // Configuration webpack personnalisée
@@ -22,3 +26,5 @@ module.exports = {
     return config;
   },
 };
+
+module.exports = withBundleAnalyzer({});

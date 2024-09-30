@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import CardModal from './../ServiceCards/CardsModal';
 import { Card, CardHeader } from '@nextui-org/react';
 import { motion } from 'framer-motion';
@@ -20,7 +20,7 @@ interface cardInterface {
 }
 
 // Composant de chaque carte individuelle
-const CardComponent: React.FC<cardInterface> = ({
+const CardComponent: React.FC<cardInterface> = React.memo (({
   id, title, description, imageSrc, modalTitle, modalDescription, modalIcons, showModal, handleShowModal, currentCard, color, baliseAlt 
 }) => {
   return (
@@ -28,9 +28,9 @@ const CardComponent: React.FC<cardInterface> = ({
       key={id} // Clé unique pour chaque carte
       whileTap="hover" // Animation au clic
       onClick={() => handleShowModal(id)} // Gère l'ouverture de la modal au clic
-      initial={{ opacity: 0, scale: 1, x: id % 2 === 0 ? -40 : 40, y: -40 }} // Animation d'apparition initiale
+      initial={{ opacity: 0, scale: 1, x: id % 2 === 0 ? -20 : 20, y: -20 }} // Animation d'apparition initiale
       whileInView={{ opacity: 1, x: 0, y: 0 }} // Animation lorsque la carte entre dans le viewport
-      transition={{ duration: 1 }} // Durée de la transition d'apparition
+      transition={{ duration: 0.6 }} // Durée de la transition d'apparition
       viewport={{ once: true }} // Ne déclenche l'animation qu'une seule fois
       whileHover={{ scale: 1.03 }} // Effet de survol
       className="-z-0 box col-span-12 sm:col-span-4 flex flex-row relative max-xl:overflow-hidden"
@@ -69,7 +69,7 @@ const CardComponent: React.FC<cardInterface> = ({
         color={color}
       />
     </motion.div>
-  );
-};
-
+  )
+})
+CardComponent.displayName = 'CardComponent';
 export default CardComponent;
