@@ -140,7 +140,7 @@ const Hero: React.FC = () => {
             Me contacter <EnvelopeIcon className="w-5" />
           </button>
           <a
-            href="/documents/CV_2024_Développeur_web_et_mobile-12Mois_compressed(1).pdf"
+            href="/documents/CV_2024_Développeur_web.pdf"
             download="CV_2024_Développeur_web_et_mobile.pdf"
           >
             <div className="flex items-center gap-1">
