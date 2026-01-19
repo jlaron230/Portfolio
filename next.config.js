@@ -25,6 +25,7 @@ module.exports = {
 
     return config;
   },
+  turbopack: false
 };
 
 module.exports = withBundleAnalyzer({});

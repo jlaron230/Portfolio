@@ -6,19 +6,20 @@ interface cardInterface {
   isOpen: boolean;
   title: string;
   description: string;
-  icons: string[];
+  icons: React.FC<{ className?: string }>[];
   color: string;
 }
 
 // Composant modal associé à chaque carte
 const CardModal: React.FC<cardInterface> = ({ isOpen, title, description, icons, color }) => {
+  if (!isOpen) return null;
   return (
     <motion.div
       // Conteneur du modal, s'affiche si isOpen est vrai
-      className={`absolute inset-0 flex items-center justify-center z-20 bg-white rounded-large ${isOpen ? 'opacity-100' : 'opacity-0'}`}
+      className={`absolute inset-0 flex items-center justify-center z-20 bg-white rounded-large `}
       initial={{ opacity: 0, y: '25%' }} // Animation d'apparition
       animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? '0' : '25%' }} // Animation lorsque la modal s'ouvre ou se ferme
-      transition={{ duration: 0.2, delay: 0.2 }} // Transition avec délai
+      transition={{ duration: 0.2, delay: 0.35 }} // Transition avec délai
     >
       <div className="text-center flex justify-center gap-2 flex-wrap p-4">
         {/* Titre du modal */}
@@ -28,15 +29,10 @@ const CardModal: React.FC<cardInterface> = ({ isOpen, title, description, icons,
 
         {/* Liste d'icônes affichées dans le modal */}
         <div className="flex flex-wrap justify-center gap-4">
-          {icons.map((icon, index) => (
-            <motion.img
-            loading='lazy'
+          {icons.map((Icon, index) => (
+            <Icon
               key={index} // Clé unique pour chaque icône
-              initial={{ x: 0, y: 0, scale: 1, rotate: 0 }} // Animation initiale
-              whileHover={{ x: 0, y: -4, scale: 1.1, rotate: 4 }} // Animation au survol
-              src={icon} // Source de l'icône
-              className="w-12"
-              alt={`Icon ${index}`} // Texte alternatif pour chaque icône
+              className="w-12 h-12"
             />
           ))}
         </div>

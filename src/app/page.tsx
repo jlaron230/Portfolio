@@ -1,6 +1,5 @@
 "use client";
 import Hero from "./components/HeroSection/Hero";
-import "./globals.css";
 // 1. import `NextUIProvider` component
 import { NextUIProvider } from "@nextui-org/react";
 import ServiceProjet from "./service_projet/ServiceProjet";

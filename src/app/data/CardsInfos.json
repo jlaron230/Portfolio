@@ -7,11 +7,11 @@
     "modalTitle": "Graphisme",
     "modalDescription": "Création de votre identité graphique (logo, dépliant, flyer, affiche, brochure...), pour la communication de votre entreprise.",
     "modalIcons": [
-      "/images/Logos/Figma.png",
-      "/images/Logos/Première.png",
-      "/images/Logos/Indesign.png",
-      "/images/Logos/Illustrator.png",
-      "/images/Logos/PhotoshopLogo.png"
+      "FigmaIcon",
+      "PremiereIcon",
+      "IndesignIcon",
+      "IllustratorIcon",
+      "PhotoshopIcon"
     ],
     "color": "txt_colorSkill2",
     "baliseAlt": "mise en situation d'une affiche dans un bureau"
@@ -24,13 +24,16 @@
     "modalTitle": "Développement web",
     "modalDescription": "Un site internet qui correspond à votre image et vos besoins.",
     "modalIcons": [
-      "/images/Logos/Html.png",
-      "/images/Logos/Css.png",
-      "/images/Logos/Javascript.png",
-      "/images/Logos/NodeJs.png",
-      "/images/Logos/SQL.png",
-      "/images/Logos/React.png",
-      "/images/Logos/Wordpress.png"
+      "HtmlIcon",
+      "CssIcon",
+      "JavascriptIcon",
+      "NodeJsIcon",
+      "SQLIcon",
+      "ReactIcon",
+      "WordpressIcon",
+      "DockerIcon",
+      "SymfonyIcon",
+      "PhpIcon"
     ],
     "color": "txt_colorSecondary",
     "baliseAlt": "Homme qui travaille sur son ordinateur"
@@ -43,9 +46,9 @@
     "modalTitle": "Développement jeux vidéos",
     "modalDescription": "Mini-jeux pour votre site web/application afin de vous démarquer",
     "modalIcons": [
-      "/images/Logos/Sharp.png",
-      "/images/Logos/Unity.png",
-      "/images/Logos/Javascript.png"
+      "CSharpIcon",
+      "UnityIcon",
+      "JavascriptIcon"
     ],
     "color": "txt_colorSkill1",
     "baliseAlt": "Un homme devant un ordinateur entrain de travailler"
@@ -57,7 +60,7 @@
     "imageSrc": "images/Impression3D.webp",
     "modalTitle": "Impression 3D",
     "modalDescription": "Modélisation et impression de vos pièces en 3D",
-    "modalIcons": ["/images/Logos/Cura.png", "/images/Logos/Fusion360.png"],
+    "modalIcons": ["CuraIcon", "Fusion360Icon"],
     "color": "txt_colorPrimary",
     "baliseAlt": "une imprimante 3D avec des filaments"
   },
@@ -68,12 +71,7 @@
     "imageSrc": "images/DisqueDur.webp",
     "modalTitle": "Informatique",
     "modalDescription": "Dépannage, réparation et installation de votre matériel informatique",
-    "modalIcons": [
-      "/images/Logos/Windows.png",
-      "/images/Logos/Apple.png",
-      "/images/Logos/Linux.png",
-      "/images/Logos/Ordinateur.png",
-      "/images/Logos/Imprimante.png"
+    "modalIcons": ["WindowsIcon","AppleIcon","LinuxIcon","ComputerIcon","PrintIcon"
     ],
     "color": "txt_colorblack",
     "baliseAlt": "Disque dur informatique"

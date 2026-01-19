@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
 
   const link = () => {
-    window.open("mailto:jlaron230@hotmail.fr")
+    window.open("mailto:jerome.gavino@hotmail.com")
   };
 
   useEffect(() => {

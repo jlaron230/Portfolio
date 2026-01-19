@@ -50,11 +50,6 @@
   }
 }
 
-body {
-  font-family: 'Titillium Web', sans-serif;
-  font-weight: 700; /* Correspond à la définition de @font-face */
-  font-style: normal;
-}
 
 .font_container {
   font-family: 'Titillium Web', sans-serif;
@@ -139,6 +134,9 @@ h4 {
 }
 
 body {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700; /* Correspond à la définition de @font-face */
+  font-style: normal;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -158,13 +156,9 @@ html {
   font-style: normal;
 }
 
-.hero_font_title_orbitron {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Orbitron';
-  font-style: normal;
-  font-weight: 600;
-}
 
+
+/* SCROLLBAR - Custom
 .scrollbar {
   position: fixed;
   top: 0;
@@ -189,7 +183,7 @@ html {
   width: 0;
   background: transparent;
 }
-
+*/
 
 
 /* Hero.css */
@@ -335,8 +329,8 @@ p {
 
 /* Styles CSS pour l'effet de frappe */
 @keyframes typing {
-  from { width: 20%; height:0%;}
-  to { width: 50%;height:0%; }
+  from { width: 20%; height:0;}
+  to { width: 50%;height:0; }
 }
 
 @keyframes blink-caret {
