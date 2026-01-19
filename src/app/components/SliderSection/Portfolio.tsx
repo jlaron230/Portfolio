@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import data from "../../data/images.json";
 import ProjectSection from "./ProjectSection";
-import MedhylemmeComponent from "./MedhylemmeComponent";
+import SkillNestComponent from "./SkillNestComponent";
 
 // Interface pour typer les données du slider
 interface SliderData {
@@ -99,7 +99,7 @@ const Portfolio: React.FC<alt> = ({alt}) => {
       />
 
       {/* Composant pour le projet Medhylemme */}
-      <MedhylemmeComponent />
+      <SkillNestComponent />
 
       {/* Section pour le troisième projet */}
       <ProjectSection

@@ -18,11 +18,11 @@
   },
   {
     "id": 2,
-    "title": "Site web",
+    "title": "Site web - application",
     "description": "Recherche, Développement, déploiement",
     "imageSrc": "images/Ordinateur-Adami.webp",
-    "modalTitle": "Développement web",
-    "modalDescription": "Un site internet qui correspond à votre image et vos besoins.",
+    "modalTitle": "Développement",
+    "modalDescription": "Un site/application qui correspond à votre image et vos besoins.",
     "modalIcons": [
       "HtmlIcon",
       "CssIcon",

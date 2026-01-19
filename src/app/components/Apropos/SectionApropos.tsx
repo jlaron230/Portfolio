@@ -26,11 +26,12 @@ const SectionApropos = () => {
           <motion.img
             whileHover="hover"  // Animation supplémentaire au survol.
             initial={{ opacity: 0, scale: 2, x: 100, y: 0 }}  // Image invisible au départ avec un zoom appliqué.
-            className="img"  // Classe CSS pour styliser l'image.
+            className="img pointer-events-none "  // Classe CSS pour styliser l'image.
             src={images[0]}  // Chemin de l'image à afficher.
             animate={{ opacity: 1 }}  // L'image devient visible.
             exit={{ opacity: 0 }}  // Animation lorsqu'on quitte la vue.
             transition={{ duration: 0.5 }}  // Durée de cette animation : 0.5 seconde.
+            loading={"eager"}
           />
         </motion.div>
 
@@ -45,14 +46,16 @@ const SectionApropos = () => {
             {/* Contenu textuel décrivant le parcours et les compétences de la personne. */}
             Passionné par le design, les jeux vidéo et l&apos;informatique, j&apos;ai un
             parcours atypique. Diplômé en signalétique et graphisme, j&apos;ai
-            développé un jeu en C# avec Unity avant de me spécialiser en web
-            design (<span className="txt_colorSkill2">HTML, CSS, WordPress, UI/UX</span>). <br /> <br />
-            Après des expériences dans la publicité et le graphisme, notamment à
-            l&apos;Université d&apos;Aix-Marseille, j&apos;ai approfondi mes compétences en
-            logiciels créatifs et gestion de projets. Récemment formé chez
-            Simplon (<span className="txt_colorSecondary">API REST, React, MySQL</span>), je cherche une alternance pour
-            participer à des projets ambitieux en mettant à profit mon
-            expérience.
+            commencé par développer un jeu en C# avec Unity avant de me spécialiser
+            en web design <span className="txt_colorSkill2">(HTML, CSS, WordPress, UI/UX)</span>). <br/> <br/>
+            Après des expériences en publicité et graphisme,
+            j’ai suivi une formation chez Simplon où j’ai acquis des compétences en (<span
+              className="txt_colorSecondary">API REST, React, MySQL</span>)
+            Entre 2024 et 2025, en alternance au sein de la DirNum d’AMU à Aix-en-Provence via Ynov, j’ai participé à la
+            migration d’une application web métier
+            (<span className="txt_colorSecondary">Symfony 5.4 → 6.4</span>).
+            <br/> <br/>
+            Récemment formé sur les technologies web modernes, je cherche à mettre à profit mon expérience et mes compétences techniques dans des projets ambitieux.
           </p>
         </motion.div>
       </article>

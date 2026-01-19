@@ -55,38 +55,72 @@ export default function AccordionXP() {
             {/* Élément 1: Développeur web (stage) */}
             <AccordionItem
               key="1"
-              aria-label="Développeur web (stage)"
-              title={<span className={addStyleAccordion("1")}>Développeur web (stage)</span>}
+              aria-label="Développeur web (alternance)"
+              title={<span className={addStyleAccordion("1")}>Développeur d'application (alternance)</span>}
               className={`flex flex-wrap justify-between flex-col ${addStyleAccordionBg("1")}`}
             >
               {/* Informations liées à l'expérience */}
               <div className="flex flex-wrap justify-between">
                 <span className="txt_colorSecondary text-xl pb-3.5">
-                  <Link className="text-xl" aria-label="Lien vers l'agence web Oyopi de Digne-les-bains" href="https://www.oyopi.com/">Oyopi</Link> | Avril 2024 - Juin 2024
+                  <Link className="text-xl" aria-label="Lien vers le service de la Dirnum AMU" href="https://dirnum.univ-amu.fr/fr">Dirnum AMU</Link> | novembre 2024 - octobre 2025
                 </span>
               </div>
               <p>
                 {/* Description des tâches réalisées pendant l'expérience */}
-                Plugin graphiques, <span className="txt_colorSecondary">(intégration/déploiement)</span> dév. web
-                <span className="txt_colorSecondary">(html/css/JS)</span>. Analyse code, maquettage CMS, filtrage(JetEngine) SEO,
-                responsive design, debugging.
-                <br />
-                <br />
-                Design web, logique (Constructeur de thème), CSS & JS Fonctionnalités web
-                <span className="txt_colorSecondary">(maquettes, déploiement, tests)</span>. Design web responsive, propositions & travail d’équipe.
+                Migration d’une application web métier <span className="txt_colorSecondary">(Symfony 5.4 → 6.4)</span>.
+                Refactorisation du code,
+                résolution des dépréciations,
+                amélioration de la maintenabilité et de la modularité
+                <span className="txt_colorSecondary"> (POO, Clean Code). </span>
+                <br/>
+                <br/>
+                Utilisation de Rector et PHPStan. Gestion du versioning GitLab et
+                <span className="txt_colorSecondary"> CI/CD avec Docker</span> Déploiement et tests sur serveur Debian
+                <span className="txt_colorSecondary"> (Linux)</span>.
+                Travail en équipe et participation aux réunions techniques.
               </p>
             </AccordionItem>
 
-            {/* Élément 2: Développement jeu vidéo */}
+            {/* Élément 2: Développeur web (stage) */}
             <AccordionItem
-              key="2"
+                key="2"
+                aria-label="Développeur web (alternance)"
+                title={<span className={addStyleAccordion("2")}>Développeur web (stage)</span>}
+                className={`flex flex-wrap justify-between flex-col ${addStyleAccordionBg("2")}`}
+            >
+              {/* Informations liées à l'expérience */}
+              <div className="flex flex-wrap justify-between">
+                <span className="txt_colorSecondary text-xl pb-3.5">
+                  <Link className="text-xl" aria-label="Lien vers le site de l'agence Oyopi" href="https://www.oyopi.com/">Oyopi</Link> | mai 2024 - juin 2024
+                </span>
+              </div>
+              <p>
+                {/* Description des tâches réalisées pendant l'expérience */}
+                Plugins graphiques <span className="txt_colorSecondary">(intégration/déploiement)</span>.
+                Dév. web <span className="txt_colorSecondary">(HTML/CSSJS/PHP)</span>
+                Analyse code, maquettage
+                CMS, Filtrage <span className="txt_colorSecondary"> (Jetengine). </span> SEO,
+                responsive design, debugging.
+                <br/>
+                <br/>
+                Design web, logique
+                <span className="txt_colorSecondary"> (constructeur thème), CSS JS</span> Fonctionnalités web
+                <span className="txt_colorSecondary"> (maquettes, Déploiement, tests) </span>.
+                Design web responsive
+                Propositions & travail d’équipe
+              </p>
+            </AccordionItem>
+
+            {/* Élément 3: Développement jeu vidéo */}
+            <AccordionItem
+              key="3"
               aria-label="Développement jeu vidéo"
-              title={<span className={addStyleAccordion("2")}>Développement jeu vidéo</span>}
-              className={`flex flex-wrap justify-between flex-col ${addStyleAccordionBg("2")}`}
+              title={<span className={addStyleAccordion("3")}>Développement jeu vidéo</span>}
+              className={`flex flex-wrap justify-between flex-col ${addStyleAccordionBg("3")}`}
             >
               <div className="flex flex-wrap justify-between">
                 <span className="txt_colorSecondary text-xl pb-3.5">
-                  <Link className="text-xl" aria-label="Lien vers le site pour télécharger Adami, le jeu vidéo RPG Fantastique" href="https://gamejolt.com/games/AdamiGame/851212">Projet personnel</Link> | 2024
+                  <Link className="text-xl" aria-label="Lien vers le site pour télécharger Adami, le jeu vidéo RPG Fantastique" href="https://gamejolt.com/games/AdamiGame/851212">Projet personnel</Link> | 2026
                 </span>
               </div>
               <p>
@@ -96,7 +130,32 @@ export default function AccordionXP() {
                 <br />
                 <br />
                 Conception de l’espace UI et des graphismes 2D. Stratégie marketing et promotion du projet
-                <span className="txt_colorSecondary">(concours, réseaux sociaux, Bêta-test, exposition)</span>.
+                <span className="txt_colorSecondary"> (concours, réseaux sociaux, Bêta-test, exposition)</span>.
+              </p>
+            </AccordionItem>
+            {/* Élément 4: Développement Start-up */}
+            <AccordionItem
+                key="4"
+                aria-label="Développement Start-up"
+                title={<span className={addStyleAccordion("4")}>Développement Start-up</span>}
+                className={`flex flex-wrap justify-between flex-col ${addStyleAccordionBg("3")}`}
+            >
+              <div className="flex flex-wrap justify-between">
+                <span className="txt_colorSecondary text-xl pb-3.5">
+                  <Link className="text-xl" aria-label="Lien vers le site de la start up" href="https://beta.skillnest.fr/">Projet collaboratif</Link> | 2025 - 2026
+                </span>
+              </div>
+              <p>
+                {/* Description des tâches liées au développement d'une start up */}
+                Projet startup – Co-fondateur & Développeur Front-end.
+                Développement en Next.js <span className="txt_colorSecondary">(TypeScript, JavaScript)</span>.
+                Maquettage UI/UX <span className="txt_colorSecondary"> (Figma)</span>  et graphisme <span className="txt_colorSecondary"> (Illustrator)</span>.
+                <br />
+                <br />
+                Participation à la pré-production, à la conception de
+                l’application et aux choix
+                fonctionnels. Promotion du projet :
+                <span className="txt_colorSecondary"> (réunions, concours nationaux et pitch)</span>. Force de proposition et travail d’équipe.
               </p>
             </AccordionItem>
           </Accordion>
@@ -112,12 +171,12 @@ export default function AccordionXP() {
         >
           <h3>Graphisme</h3>
           <Accordion selectedKeys={selectedKeys} onSelectionChange={handleSelectionChange} className="mt-8">
-            {/* Élément 3: Imprimeur polyvalent */}
+            {/* Élément 5: Imprimeur polyvalent */}
             <AccordionItem
-              key="3"
+              key="5"
               aria-label="Imprimeur polyvalent"
-              title={<span className={addStyleAccordion("3")}>Imprimeur polyvalent</span>}
-              className={`flex flex-wrap justify-between flex-col ${addStyleAccordionBg("3")}`}
+              title={<span className={addStyleAccordion("5")}>Imprimeur polyvalent</span>}
+              className={`flex flex-wrap justify-between flex-col ${addStyleAccordionBg("5")}`}
             >
               <div className="flex flex-wrap justify-between">
                 <span className="txt_colorSecondary text-xl pb-3.5">
@@ -133,12 +192,12 @@ export default function AccordionXP() {
               </p>
             </AccordionItem>
 
-            {/* Élément 4: Graphiste */}
+            {/* Élément 6: Graphiste */}
             <AccordionItem
-              key="4"
+              key="6"
               aria-label="Graphiste"
-              title={<span className={addStyleAccordion("4")}>Graphiste</span>}
-              className={`flex flex-wrap justify-between flex-col ${addStyleAccordionBg("4")}`}
+              title={<span className={addStyleAccordion("6")}>Graphiste</span>}
+              className={`flex flex-wrap justify-between flex-col ${addStyleAccordionBg("6")}`}
             >
               <div className="flex flex-wrap justify-between">
                 <span className="txt_colorSecondary text-xl pb-3.5">

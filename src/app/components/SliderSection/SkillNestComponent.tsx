@@ -3,8 +3,8 @@ import React from 'react'
 import { motion } from "framer-motion";
 import { Button, Link } from "@nextui-org/react";
 
-// Composant MedhylemmeComponent
-const MedhylemmeComponent = () => {
+// Composant SkillNest
+const SkillNestComponent = () => {
   return (
     <article className="Interlaptop:flex-row-reverse relative max-w-[1280px] flex flex-wrap gap-10 justify-center items-center my-36 h-96">
       {/* Conteneur principal avec les styles de mise en page */}
@@ -15,20 +15,20 @@ const MedhylemmeComponent = () => {
         transition={{ duration: 1 }} // Durée de la transition
         viewport={{ once: true }} // L'animation se joue une seule fois
       >
-        <h3 className="projet_font">Medhylemme</h3>
+        <h3 className="projet_font">SkillNest</h3>
         <p>
-          Medhylemme est une application dédiée aux dilemmes et choix
-          difficiles...
+          SkillNest, une application dédiée au soutien scolaire
+            et aux perspectives d'avenir... <span className="colorSecondary">(En cours de développement)</span>
         </p>
         <div className="flex ">
           <Button
             target="blank"
-            href="https://medhylemme.vercel.app/"
+            href="https://beta.skillnest.fr/"
             as={Link}
             showAnchorIcon
             variant="solid"
             className="mt-2 colorSecondary text-white z-10"
-            aria-label='Le site de medhylemme'
+            aria-label='Application SkillNest de soutien scolaire'
           >
             Le projet
           </Button>
@@ -60,8 +60,8 @@ const MedhylemmeComponent = () => {
         {/* Image animée */}
         <motion.img
           className="img"
-          src="./images/Medhylemme.webp"
-          alt='Medhylemme, un site de dilemme et de fun. '
+          src="./images/SkillNest.webp"
+          alt='SkillNest une plateforme de soutien de scolaire'
           drag="x" // Permet le glissement horizontal
           dragConstraints={{ left: 0, right: 0 }} // Contraintes de glissement horizontal
           animate={{ x: 0, opacity: 1 }} // Animation des propriétés
@@ -85,4 +85,4 @@ const MedhylemmeComponent = () => {
   )
 }
 
-export default MedhylemmeComponent
+export default SkillNestComponent
