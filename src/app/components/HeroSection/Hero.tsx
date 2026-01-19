@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
 
   const link = () => {
-    window.open("mailto:jerome.gavino@hotmail.com")
+    window.location.href = "#Contact";
   };
 
   useEffect(() => {
@@ -133,15 +133,15 @@ const Hero: React.FC = () => {
           Jérôme Gavino
         </p>
         <h1 className="slide-in hero_font_title_orbitron ">
-          Développeur Full-Stack
+          Développeur Informatique
         </h1>
         <div className="flex items-center gap-4 sm:flex-row max-sm:flex-col mt-4">
           <button aria-label="Contactez-moi par email" onClick={link} className="btn flex items-center gap-2">
             Me contacter <EnvelopeIcon className="w-5" />
           </button>
           <a
-            href="/documents/CV_2024_Développeur_web.pdf"
-            download="CV_2024_Développeur_web_et_mobile.pdf"
+            href="/documents/CV_2026_Concepteur_développeur_d'application.pdf"
+            download="CV_2026_Développeur_concepteur_application.pdf"
           >
             <div className="flex items-center gap-1">
               <span>Mon CV</span>

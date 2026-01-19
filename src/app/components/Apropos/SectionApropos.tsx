@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";  // Importation de la bibliothèque pour ajouter des animations.
 
 const SectionApropos = () => {

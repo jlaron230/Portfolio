@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import data from "../../data/images.json";
 import ProjectSection from "./ProjectSection";

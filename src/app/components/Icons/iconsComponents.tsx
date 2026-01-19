@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import DockerIcon from "@/app/components/Icons/DockerIcon";
 import WindowsIcon from "@/app/components/Icons/WindowsIcon";

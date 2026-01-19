@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import AccordionXP from '../components/ExperienceAccordeon/AccordionXP'
 const Experiences = () => {

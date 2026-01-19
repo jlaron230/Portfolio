@@ -16,31 +16,32 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
+    <head>
+      <meta charSet="UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta
           name="description"
           content="Mes projets est compétences en informatique dans ce portfolio"
-        />
-        <meta name="author" content="Jérôme Gavino" />
-        <meta
+      />
+      <meta name="author" content="Jérôme Gavino"/>
+      <meta
           property="og:image"
           content="images/w1000-1133478AE9sXs77.webp"
-        />
-        <meta
+      />
+      <meta
           property="og:description"
           content="Jérôme propose ses compétences en informatique et ses qualités
           de graphiste, modélisateur 3D, informaticien et ses compétences en développement informatique
           pour vos besoins"
-        />
-        <meta property="og:title" content="Jérôme Gavino" />
-        <title>Jérôme Portfolio</title>
-      </head>
-      <body>
-        <NavBarOverlay />
-        {children}
-        <SpeedInsights />
+      />
+      <meta property="og:title" content="Jérôme Gavino"/>
+      <title>Jérôme Portfolio</title>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </head>
+    <body>
+    <NavBarOverlay/>
+    {children}
+    <SpeedInsights />
         <Footer />
       </body>
     </html>

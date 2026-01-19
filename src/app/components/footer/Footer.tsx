@@ -14,10 +14,10 @@ import * as Yup from "yup"; // Assure-toi que Yup est installé
 
 // ValidationSchema pour Formik
 const validationSchema = Yup.object({
-  Firstname: Yup.string().required("Prénom requis"),
-  Lastname: Yup.string().required("Nom requis"),
-  Email: Yup.string().email("Email invalide").required("Email requis"),
-  Message: Yup.string().required("Message requis"),
+  firstname: Yup.string().required("Prénom requis"),
+  lastname: Yup.string().required("Nom requis"),
+  email: Yup.string().email("email invalide").required("email requis"),
+  message: Yup.string().required("message requis"),
   terms: Yup.boolean().oneOf(
     [true],
     "Vous devez accepter les termes et conditions"
@@ -88,34 +88,19 @@ const FormField: React.FC<FormFieldProps> = ({
 );
 
 const Footer = () => {
-  const initialValues = {
-    Firstname: "",
-    Lastname: "",
-    Email: "",
-    Message: "",
-    terms: false,
-  };
 
   const formik = useFormik({
-    initialValues,
+    initialValues: {
+      firstname: "",
+      lastname: "",
+      email: "",
+      message: "",
+      terms: false,
+    },
     validationSchema,
-    onSubmit: async (values, { setSubmitting, resetForm }) => {
-      try {
-        await axios.post("https://formspree.io/f/mnnaywbp", values, {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-        resetForm();
-        alert("Le message s'est bien envoyé");
-      } catch (err) {
-        if (axios.isAxiosError(err) && err.response) {
-          alert(`error: ${err.response.data}`);
-        } else {
-          alert("Une erreur s'est produite. Veuillez réessayer.");
-        }
-      }
-      setSubmitting(false);
+    onSubmit: () => {
+      // ❌ on NE bloque PAS le submit
+      // Formspree gère l’envoi via POST natif
     },
   });
 
@@ -128,8 +113,9 @@ const Footer = () => {
         <h2>Contactez-moi</h2>
       </div>
       <form
-        method="POST"
-        onSubmit={formik.handleSubmit}
+          method="POST"
+          action="https://formspree.io/f/mnnaywbp"
+          onSubmit={formik.handleSubmit}
         className="sm:w-6/12 lg:w-4/12 max-sm:w-full"
       >
         <motion.div
@@ -139,45 +125,45 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <FormField
-            id="Lastname"
+            id="lastname"
             label="Nom"
             placeholder="Nom"
-            value={formik.values.Lastname}
+            value={formik.values.lastname}
             onchange={formik.handleChange}
             onBlur={formik.handleBlur}
-            error={formik.errors.Lastname}
-            touched={formik.touched.Lastname}
+            error={formik.errors.lastname}
+            touched={formik.touched.lastname}
           />
           <FormField
-            id="Firstname"
+            id="firstname"
             label="Prénom"
             placeholder="Prénom"
-            value={formik.values.Firstname}
+            value={formik.values.firstname}
             onchange={formik.handleChange}
             onBlur={formik.handleBlur}
-            error={formik.errors.Firstname}
-            touched={formik.touched.Firstname}
+            error={formik.errors.firstname}
+            touched={formik.touched.firstname}
           />
           <FormField
-            id="Email"
-            label="Email"
+            id="email"
+            label="email"
             type="email"
-            placeholder="Email"
-            value={formik.values.Email}
+            placeholder="email"
+            value={formik.values.email}
             onchange={formik.handleChange}
             onBlur={formik.handleBlur}
-            error={formik.errors.Email}
-            touched={formik.touched.Email}
+            error={formik.errors.email}
+            touched={formik.touched.email}
           />
           <FormField
-            id="Message"
-            label="Message"
-            placeholder="Message"
-            value={formik.values.Message}
+            id="message"
+            label="message"
+            placeholder="message"
+            value={formik.values.message}
             onchange={formik.handleChange}
             onBlur={formik.handleBlur}
-            error={formik.errors.Message}
-            touched={formik.touched.Message}
+            error={formik.errors.message}
+            touched={formik.touched.message}
             isTextArea
           />
           <div className="flex items-center mb-5">
@@ -209,9 +195,11 @@ const Footer = () => {
               </small>
             )}
           </div>
+          {/* CAPTCHA intégré — Formspree va insérer si configuré */}
+          <input type="text" name="_gotcha" style={{display: "none"}}/>
           <button
-            type="submit"
-            className="bg-white text-black p-4 rounded-md mt-4 btn"
+              type="submit"
+              className="bg-white text-black p-4 rounded-md mt-4 btn"
             disabled={!formik.isValid || formik.isSubmitting}
           >
             Envoyer

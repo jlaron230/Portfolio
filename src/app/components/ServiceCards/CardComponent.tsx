@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import CardModal from './../ServiceCards/CardsModal';
 import { Card, CardHeader } from '@nextui-org/react';

@@ -4,28 +4,27 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 
-
-module.exports = {
-  // Configuration webpack personnalisée
-  webpack(config, { isServer }) { //configuration webpack rendu coté client
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Forcer Webpack (désactive Turbopack pour ce projet)
+  experimental: {
+    turbo: false,
+  },
+  webpack(config, { isServer }) {
     if (!isServer) {
-      config.optimization.minimizer.push( //optimisation en minifiant le code
-        new TerserPlugin({
-          terserOptions: {
-            compress: true, //compression du code
-            mangle: true, // obfuscation nom des variables
-            format: {
-              comments: false, //supprimer les commentaires
+      config.optimization.minimizer.push(
+          new TerserPlugin({
+            terserOptions: {
+              compress: true,
+              mangle: true,
+              format: { comments: false },
             },
-          },
-          extractComments: false, //empecher l'extraction de commentaires
-        })
+            extractComments: false,
+          })
       );
     }
-
     return config;
   },
-  turbopack: false
 };
 
-module.exports = withBundleAnalyzer({});
+module.exports = withBundleAnalyzer(nextConfig);
