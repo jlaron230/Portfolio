@@ -17,6 +17,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@hcaptcha/react-hcaptcha": "^2.0.2",
     "@heroicons/react": "^2.1.5",
     "@next/bundle-analyzer": "^14.2.13",
     "@nextui-org/navbar": "^2.0.36",
