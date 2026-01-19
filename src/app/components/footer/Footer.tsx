@@ -193,7 +193,7 @@ const Footer = () => {
 
                     {/* hCaptcha */}
                     <HCaptcha
-                        sitekey="TON_SITE_KEY_HCAPTCHA"
+                        sitekey="6Lez0k8sAAAAAIaS4hrvAMB5L_SjmlYeUA73ls-J"
                         onVerify={(token: React.SetStateAction<string | null>) => setCaptchaToken(token)}
                         onExpire={() => setCaptchaToken(null)}
                     />
