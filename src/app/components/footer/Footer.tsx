@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { Link } from "@nextui-org/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,88 +8,92 @@ import {
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import axios from "axios";
 import { motion } from "framer-motion";
 import { useFormik } from "formik";
-import * as Yup from "yup"; // Assure-toi que Yup est installé
+import * as Yup from "yup";
 
-// ValidationSchema pour Formik
+/* ---------------- VALIDATION ---------------- */
+
 const validationSchema = Yup.object({
   firstname: Yup.string().required("Prénom requis"),
   lastname: Yup.string().required("Nom requis"),
-  email: Yup.string().email("email invalide").required("email requis"),
-  message: Yup.string().required("message requis"),
+  email: Yup.string().email("Email invalide").required("Email requis"),
+  message: Yup.string().required("Message requis"),
   terms: Yup.boolean().oneOf(
-    [true],
-    "Vous devez accepter les termes et conditions"
+      [true],
+      "Vous devez accepter les termes et conditions"
   ),
 });
 
-// Interface définissant les propriétés attendues pour les champs de formulaire
+/* ---------------- INPUT COMPONENT ---------------- */
+
 interface FormFieldProps {
   id: string;
   label: string;
   type?: string;
   placeholder: string;
   value: string;
-  onchange: (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => void;
-  onBlur: (
-    event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => void;
-  touched: boolean | undefined;
-  error: string | undefined;
+  onChange: React.ChangeEventHandler<
+      HTMLInputElement | HTMLTextAreaElement
+  >;
+  onBlur: React.FocusEventHandler<
+      HTMLInputElement | HTMLTextAreaElement
+  >;
+  touched?: boolean;
+  error?: string;
   isTextArea?: boolean;
 }
 
-// Composant pour les champs du formulaire (input ou textarea)
 const FormField: React.FC<FormFieldProps> = ({
-  id,
-  label,
-  type = "text",
-  placeholder,
-  value,
-  onchange,
-  onBlur,
-  error,
-  touched,
-  isTextArea = false,
-}) => (
-  <div className="my-4">
-    <label htmlFor={id}>{label}</label>
-    {!isTextArea ? (
-      <input
-        value={value}
-        onChange={onchange}
-        id={id}
-        name={id}
-        type={type}
-        placeholder={placeholder}
-        onBlur={onBlur}
-        className="border-2 text-black border-white p-4 mt-4 rounded-md w-full"
-        required
-      />
-    ) : (
-      <textarea
-        value={value}
-        onChange={onchange}
-        id={id}
-        name={id}
-        placeholder={placeholder}
-        onBlur={onBlur}
-        className="border-2 text-black border-white p-4 mt-4 rounded-md w-full"
-        rows={5}
-      />
-    )}
-    {touched && error && (
-      <small className="error text-red-800 font-semibold">{error}</small>
-    )}
-  </div>
+                                               id,
+                                               label,
+                                               type = "text",
+                                               placeholder,
+                                               value,
+                                               onChange,
+                                               onBlur,
+                                               touched,
+                                               error,
+                                               isTextArea = false,
+                                             }) => (
+    <div className="my-4">
+      <label htmlFor={id}>{label}</label>
+
+      {!isTextArea ? (
+          <input
+              id={id}
+              name={id}
+              type={type}
+              placeholder={placeholder}
+              value={value}
+              onChange={onChange}
+              onBlur={onBlur}
+              className="border-2 text-black border-white p-4 mt-4 rounded-md w-full"
+              required
+          />
+      ) : (
+          <textarea
+              id={id}
+              name={id}
+              placeholder={placeholder}
+              value={value}
+              onChange={onChange}
+              onBlur={onBlur}
+              rows={5}
+              className="border-2 text-black border-white p-4 mt-4 rounded-md w-full"
+              required
+          />
+      )}
+
+      {touched && error && (
+          <small className="text-red-600 font-semibold">{error}</small>
+      )}
+    </div>
 );
 
-const Footer = () => {
+/* ---------------- FOOTER ---------------- */
 
+const Footer = () => {
   const formik = useFormik({
     initialValues: {
       firstname: "",
@@ -105,144 +110,141 @@ const Footer = () => {
   });
 
   return (
-    <div
-      id="Contact"
-      className="flex flex-col items-center justify-center w-full bg-black p-12 text-white"
-    >
-      <div className="flex justify-center pb-12">
-        <h2>Contactez-moi</h2>
-      </div>
-      <form
-          method="POST"
-          action="https://formspree.io/f/mnnaywbp"
-          onSubmit={formik.handleSubmit}
-        className="sm:w-6/12 lg:w-4/12 max-sm:w-full"
+      <div
+          id="Contact"
+          className="flex flex-col items-center justify-center w-full bg-black p-12 text-white"
       >
-        <motion.div
-          initial={{ opacity: 0, scale: 1, x: 0, y: 30 }}
-          whileInView={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
+        <h2 className="pb-12">Contactez-moi</h2>
+
+        <form
+            method="POST"
+            action="https://formspree.io/f/mnnaywbp"
+            onSubmit={formik.handleSubmit}
+            className="sm:w-6/12 lg:w-4/12 w-full"
         >
-          <FormField
-            id="lastname"
-            label="Nom"
-            placeholder="Nom"
-            value={formik.values.lastname}
-            onchange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            error={formik.errors.lastname}
-            touched={formik.touched.lastname}
-          />
-          <FormField
-            id="firstname"
-            label="Prénom"
-            placeholder="Prénom"
-            value={formik.values.firstname}
-            onchange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            error={formik.errors.firstname}
-            touched={formik.touched.firstname}
-          />
-          <FormField
-            id="email"
-            label="email"
-            type="email"
-            placeholder="email"
-            value={formik.values.email}
-            onchange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            error={formik.errors.email}
-            touched={formik.touched.email}
-          />
-          <FormField
-            id="message"
-            label="message"
-            placeholder="message"
-            value={formik.values.message}
-            onchange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            error={formik.errors.message}
-            touched={formik.touched.message}
-            isTextArea
-          />
-          <div className="flex items-center mb-5">
-            <input
-              id="terms"
-              type="checkbox"
-              name="terms"
-              checked={formik.values.terms}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
-            />
-            <label
-              htmlFor="terms"
-              className="text-white ml-2 text-sm font-medium"
-            >
-              J&apos;accepte les{" "}
-              <a
-                href="/privacy-legacy"
-                className="text-blue-600 hover:underline"
-              >
-                termes et conditions
-              </a>
-              .
-            </label>
-            {formik.touched.terms && formik.errors.terms && (
-              <small className="error text-red-600 ml-2">
-                {formik.errors.terms}
-              </small>
-            )}
-          </div>
-          {/* CAPTCHA intégré — Formspree va insérer si configuré */}
-          <input type="text" name="_gotcha" style={{display: "none"}}/>
-          <button
-              type="submit"
-              className="bg-white text-black p-4 rounded-md mt-4 btn"
-            disabled={!formik.isValid || formik.isSubmitting}
+          <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
           >
-            Envoyer
-          </button>
-        </motion.div>
-      </form>
-      <div className="gap-6 flex mb-7 mt-7">
-        <SocialLink label="Lien vers mon Github pour visualiser mes projets" href="https://github.com/jlaron230" icon={faGithub} />
-        <SocialLink
-          label="Lien vers mon Linkedin"
-          href="https://www.linkedin.com/in/j%C3%A9r%C3%B4me-gavino-284a02b8/"
-          icon={faLinkedin}
-        />
-        <SocialLink label="Lien vers mon twitter" href="https://x.com/ArtetCreation1" icon={faTwitter} />
+            <FormField
+                id="lastname"
+                label="Nom"
+                placeholder="Nom"
+                value={formik.values.lastname}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                touched={formik.touched.lastname}
+                error={formik.errors.lastname}
+            />
+
+            <FormField
+                id="firstname"
+                label="Prénom"
+                placeholder="Prénom"
+                value={formik.values.firstname}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                touched={formik.touched.firstname}
+                error={formik.errors.firstname}
+            />
+
+            <FormField
+                id="email"
+                label="Email"
+                type="email"
+                placeholder="Email"
+                value={formik.values.email}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                touched={formik.touched.email}
+                error={formik.errors.email}
+            />
+
+            <FormField
+                id="message"
+                label="Message"
+                placeholder="Votre message"
+                value={formik.values.message}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                touched={formik.touched.message}
+                error={formik.errors.message}
+                isTextArea
+            />
+
+            {/* Anti-spam Formspree */}
+            <input type="text" name="_gotcha" style={{ display: "none" }} />
+
+            <div className="flex items-center mb-5">
+              <input
+                  id="terms"
+                  name="terms"
+                  type="checkbox"
+                  checked={formik.values.terms}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  className="w-4 h-4 mr-2"
+              />
+              <label htmlFor="terms" className="text-sm">
+                J&apos;accepte les{" "}
+                <Link href="/privacy-legacy" className="text-blue-500">
+                  termes et conditions
+                </Link>
+              </label>
+            </div>
+
+            <button
+                type="submit"
+                className="bg-white text-black p-4 rounded-md w-full"
+                disabled={!formik.isValid}
+            >
+              Envoyer
+            </button>
+          </motion.div>
+        </form>
+
+        {/* SOCIALS */}
+        <div className="flex gap-6 mt-10">
+          <SocialLink
+              href="https://github.com/jlaron230"
+              icon={faGithub}
+              label="GitHub"
+          />
+          <SocialLink
+              href="https://www.linkedin.com/in/j%C3%A9r%C3%B4me-gavino-284a02b8/"
+              icon={faLinkedin}
+              label="LinkedIn"
+          />
+          <SocialLink
+              href="https://x.com/ArtetCreation1"
+              icon={faTwitter}
+              label="Twitter"
+          />
+        </div>
       </div>
-      <div className="flex justify-center gap-3">
-        <p className="text-base text-white">
-          <Link aria-label="Lien vers les mentions légales du site" href="/privacy-legacy">Mentions légales</Link> - Copyright ©
-          2024 - Gavino Jérôme. All rights reserved.
-        </p>
-      </div>
-    </div>
   );
 };
 
 export default Footer;
 
-// Interface pour les liens sociaux
+/* ---------------- SOCIAL LINK ---------------- */
+
 interface SocialLinkProps {
   href: string;
   icon: any;
   label: string;
 }
 
-// Composant pour les liens sociaux avec icônes
 const SocialLink: React.FC<SocialLinkProps> = ({ href, icon, label }) => (
-  <Link
-    className="hover:scale-125 transition delay-150 duration-300"
-    href={href}
-    aria-label={label}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <FontAwesomeIcon className="text-white" size="3x" icon={icon} />
-  </Link>
+    <Link
+        href={href}
+        aria-label={label}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:scale-125 transition"
+    >
+      <FontAwesomeIcon icon={icon} size="3x" />
+    </Link>
 );
