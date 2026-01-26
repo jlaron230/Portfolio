@@ -3,6 +3,7 @@ import React from 'react';
 import CardModal from './../ServiceCards/CardsModal';
 import { Card, CardHeader } from '@nextui-org/react';
 import { motion } from 'framer-motion';
+import Image from "next/image";
 // Interface pour définir les props attendues dans CardComponent
 interface cardInterface {
   id: number;
@@ -51,16 +52,17 @@ const CardComponent: React.FC<cardInterface> = React.memo (({
               {/* Image de fond de la carte */}
               <div
                   className="pointer-events-none relative w-full h-[20rem] sm:h-[25rem] md:h-[26rem] lg:h-[19rem] xl:h-[18rem] bg-black">
-                <img
-                    width={"295px"}
-                    height={"288px"}
-                    decoding="async"
+                <Image
+                    width={295}
+                    height={288}
+                    loading="lazy" //chargement paresseux
+                    decoding="async" //Une indication au navigateur lui précisant s'il doit attendre le décodage de l'image
+                    placeholder="empty" //Spécifie un espace réservé à utiliser pendant le chargement de l'image
                     style={{ contain: "paint" }} // limite le recalcule améliore le coutde repaint Spécifiquement recommandé pour images LCP animées
-                    loading={id === 1 ? "eager" : "lazy"}//Priorité de chargement LCP
                     fetchPriority={id === 1 ? "high" : "auto"} //Priorise la promesse en fonction de l'id de l'image
                     alt={baliseAlt} // Texte alternatif pour l'image
                     className="z-0 absolute top-0 left-0 w-full h-full object-cover opacity-85"
-                    srcSet={`${imageSrc}?w=600 600w, ${imageSrc}?w=1200 1200w`}
+                    src={`/${imageSrc}`}
                     sizes="(max-width: 600px) 600px, 1200px"
                 />
               </div>

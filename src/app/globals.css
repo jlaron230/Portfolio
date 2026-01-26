@@ -1,18 +1,12 @@
 /* titillium-web-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../app/assets/fonts/titillium-web-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
+
 /* titillium-web-600 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Titillium Web';
   font-style: normal;
   font-weight: 600;
-  src: url('../app/assets/fonts/titillium-web-v17-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('public/fonts/Titillium-Web/titillium-web-v17-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* orbitron-regular - latin */
@@ -21,7 +15,7 @@
   font-family: 'Orbitron';
   font-style: normal;
   font-weight: 400;
-  src: url('../app/assets/fonts/orbitron-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('public/fonts/Orbitron/orbitron-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 @tailwind base;
