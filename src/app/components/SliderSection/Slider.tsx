@@ -67,6 +67,7 @@ const Slider: React.FC<SliderProps> = ({ images, page, direction, paginate, defi
               onClick={() => paginate(defilement)}
           // Change la page vers la droite
           >
+
           <ChevronRightIcon />
           </div>
           {/* Bouton pour revenir à l'image précédente */}
