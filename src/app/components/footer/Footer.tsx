@@ -9,6 +9,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import HCaptcha from "@hcaptcha/react-hcaptcha"; // npm i @hcaptcha/react-hcaptcha
 import axios from "axios";
+import ScrollToTop from "@/app/components/ScrollBar/ScrollToTop";
 
 /* ---------------- VALIDATION ---------------- */
 const validationSchema = Yup.object({
@@ -121,7 +122,7 @@ const Footer = () => {
     return (
         <div id="Contact" className="flex flex-col items-center justify-center w-full bg-black p-12 text-white">
             <h2 className="pb-12">Contactez-moi</h2>
-
+            <ScrollToTop />
             <form onSubmit={formik.handleSubmit} className="sm:w-6/12 lg:w-4/12 w-full">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

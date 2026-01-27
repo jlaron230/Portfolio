@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link, Button } from "@nextui-org/react";
 import Slider from "./Slider";
+import Image from "next/image";
 
 // Interface pour les props du composant ProjectSection
 interface SectionType {
@@ -75,10 +76,16 @@ const ProjectSection: React.FC<SectionType> = ({
           animate={{ opacity: 0.1 }} // Opacité pendant l'animation
           transition={{ duration: 1 }} // Durée de la transition
         >
-          <motion.img
-            src={imageSrc}
+          <Image
+              height={200}
+              width={400}
+              loading="lazy"
+              decoding="async"
+              placeholder="empty"
+              style={{ contain: "paint" }}
+              src={`${imageSrc}`}
             alt="Image de fond"
-            className="w-full h-full object-cover" // Assure que l'image couvre tout le conteneur
+            className="(max-width: 600px) w-full h-full object-cover" // Assure que l'image couvre tout le conteneur
           />
         </motion.div>
       )}
