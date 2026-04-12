@@ -1,11 +1,12 @@
 [
   {
     "Slider1": [
-      "/images/DeadlineDrive/DeadlineDrive4.webp",
-      "/images/DeadlineDrive/DeadlineDrive2.webp",
-      "/images/DeadlineDrive/DeadlineDrive3.webp",
-      "/images/DeadlineDrive/DeadlineDrive1.webp",
-      "/images/DeadlineDrive/DeadlineDrive5.webp"
+      "/images/GestockManager/Capture-accueil-1.webp",
+      "/images/GestockManager/Capture-accueil-2.webp",
+      "/images/GestockManager/Capture-produit-1.webp",
+      "/images/GestockManager/Capture-Dashboard-1.webp",
+      "/images/GestockManager/Capture-commande-1.webp",
+      "/images/GestockManager/Capture-commande-2.webp"
     ],
     "alt": "Slider sur le projet web deadline drive, un site d'inspiration et de deadline"
   },

@@ -66,15 +66,17 @@ const Portfolio: React.FC<alt> = ({alt}) => {
       {/* Section pour le premier projet */}
       <ProjectSection
         index={0} // Premier projet
-        title="Deadline Drive"
-        description="DeadlineDrive est une plateforme créée par quatre étudiants en développement web pour combattre la procrastination de manière ludique et motivante..."
-        buttonHref="https://deadlinedrive-p8op.onrender.com/"
+        title="Gestock"
+        logoVign="/images/GestockManager/Logo-Gestock.webp"
+        altLogoVign="Logo de Gestock manager"
+        description="Gestock est une application web de gestion de stock développée en full-stack permettant de gérer produits, fournisseurs et commandes via une interface intuitive et sécurisée..."
+        buttonHref="https://gestockmanager-desktop.vercel.app"
         buttonText="Le projet"
         images={slider1}
         page={page1}
         direction={direction1}
         paginate={(direction) => paginate(1, direction)}
-        imageSrc="/images/DeadlineDrive/Logo-Deadlines-blanc.png"
+        imageSrc="/images/GestockManager/Logo-Gestock.webp"
         defilement={1}
         defilement2={-1}
         alt={alt}
@@ -84,6 +86,8 @@ const Portfolio: React.FC<alt> = ({alt}) => {
       <ProjectSection
         index={1} // Deuxième projet
         title="Adami"
+        logoVign="/images/Adami/Adami-logo.webp"
+        altLogoVign="Logo du jeu vidéo Adami"
         description="Plongez dans l'univers d'Adami, un RPG médiéval-fantastique à la première personne..."
         buttonHref="https://gamejolt.com/games/AdamiGame/851212"
         buttonText="Le projet"
@@ -105,6 +109,8 @@ const Portfolio: React.FC<alt> = ({alt}) => {
       <ProjectSection
         index={2} // Troisième projet
         title="Le Panchakarma"
+        logoVign="/images/Panchakarma/Logo panchaKarma.webp"
+        altLogoVign="Logo de l'institut le Panchakarma"
         description="Le Panchakarma, offre une présentation claire de ses prestations..."
         buttonHref="https://www.lepanchakarma.fr/"
         buttonText="Le projet"

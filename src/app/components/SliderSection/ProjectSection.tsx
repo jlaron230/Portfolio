@@ -21,6 +21,8 @@ interface SectionType {
   defilement: number; // Variable pour les effets de défilement
   defilement2: number; // Variable pour les effets de défilement secondaire
   alt: string;
+  logoVign?: string;
+  altLogoVign?: string;
 }
 
 const ProjectSection: React.FC<SectionType> = ({
@@ -28,6 +30,8 @@ const ProjectSection: React.FC<SectionType> = ({
   description,
   buttonHref,
   buttonText,
+  logoVign,
+  altLogoVign,
   images,
   page,
   direction,
@@ -52,7 +56,9 @@ const ProjectSection: React.FC<SectionType> = ({
         transition={{ duration: 1 }} // Durée de la transition
         viewport={{ once: true }} // L'animation se joue une seule fois
       >
-        <h3 className="projet_font">{title}</h3>
+        <div className="flex flex-wrap w-64 mb-5">
+          <img className="(max-width: 200px) w-full h-full object-cover" src={logoVign} alt={altLogoVign} />
+        </div>
         <p>{description}</p>
         <div className="flex">
           <Button

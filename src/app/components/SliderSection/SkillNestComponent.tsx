@@ -15,15 +15,17 @@ const SkillNestComponent = () => {
         transition={{ duration: 1 }} // Durée de la transition
         viewport={{ once: true }} // L'animation se joue une seule fois
       >
-        <h3 className="projet_font">SkillNest</h3>
+          <div className="flex flex-wrap w-64 mb-5">
+              <img className="(max-width: 200px) w-full h-full object-cover" src={"./images/SkillNest/Logo-SkillNest.webp"} alt={"Logo de Skillnest school"} />
+          </div>
         <p>
-          SkillNest, une application dédiée au soutien scolaire
-            et aux perspectives d'avenir... <span className="colorSecondary">(En cours de développement)</span>
+            SkillNest est une application de soutien scolaire
+            pour collégiens et lycéens, conçue pour identifier leurs talents et les guider vers leur avenir... <span className="colorSecondary">(En cours de développement)</span>
         </p>
         <div className="flex ">
           <Button
             target="blank"
-            href="https://beta.skillnest.fr/"
+            href="https://www.skillnest.fr/"
             as={Link}
             showAnchorIcon
             variant="solid"
@@ -60,7 +62,7 @@ const SkillNestComponent = () => {
         {/* Image animée */}
         <motion.img
           className="img"
-          src="./images/SkillNest.webp"
+          src="./images/SkillNest/SkillNest-site.webp"
           alt='SkillNest une plateforme de soutien de scolaire'
           drag="x" // Permet le glissement horizontal
           dragConstraints={{ left: 0, right: 0 }} // Contraintes de glissement horizontal
