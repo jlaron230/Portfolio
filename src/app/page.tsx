@@ -1,5 +1,6 @@
 "use client";
 import Hero from "./components/HeroSection/Hero";
+import { Analytics } from "@vercel/analytics/next"
 // 1. import `NextUIProvider` component
 import { NextUIProvider } from "@nextui-org/react";
 import ServiceProjet from "./service_projet/ServiceProjet";
@@ -24,6 +25,7 @@ export default function Home() {
           <Apropos />
         </section>
       </main>
+      <Analytics />
     </NextUIProvider>
   );
 }

@@ -3,7 +3,6 @@ import localFont from 'next/font/local'
 import NavBarOverlay from "./components/NavBar/NavBarOverlay"; // Vérifie le chemin
 import ClickScrollBar from "./components/ScrollBar/ClickScrollBar"; // Vérifie le chemin
 import Footer from "./components/footer/Footer"; // Vérifie le chemin
-import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 export const metadata: Metadata = {
@@ -62,7 +61,6 @@ export default function RootLayout({
     <NavBarOverlay/>
     {children}
     <SpeedInsights />
-    <Analytics />
         <Footer />
       </body>
     </html>
