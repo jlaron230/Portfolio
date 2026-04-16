@@ -132,10 +132,15 @@ const Hero: React.FC = () => {
         <p className="hero-container_txt hero_font_title_orbitron ">
           Jérôme Gavino
         </p>
-        <h1 className="slide-in hero_font_title_orbitron ">
-          Développeur Informatique
+        <div className="flex flex-col items-center gap-1">
+        <h1 className="slide-in orbitron-h1">
+          UI/UX Designer & Développeur Full-Stack
         </h1>
-        <div className="flex items-center gap-4 sm:flex-row max-sm:flex-col mt-4">
+        <p className="slide-in text-2xl">
+          Je conçois et développe des expériences digitales centrées utilisateur.
+        </p>
+        </div>
+        <div className="flex items-center gap-4 sm:flex-row max-sm:flex-col mt-10">
           <button aria-label="Contactez-moi par email" onClick={link} className="btn flex items-center gap-2">
             Me contacter <EnvelopeIcon className="w-5" />
           </button>

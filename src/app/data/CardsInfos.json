@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "title": "Design",
+    "title": "Design visuel",
     "description": "Création, design et publicité",
     "imageSrc": "images/AfficheBook_1-20.webp",
-    "modalTitle": "Graphisme",
-    "modalDescription": "Création de votre identité graphique (logo, dépliant, flyer, affiche, brochure...), pour la communication de votre entreprise.",
+    "modalTitle": "Design visuel",
+    "modalDescription": "Création d'identité visuelle (logo, dépliant, flyer, affiche, brochure, design digital, conception d'interface UI/UX...)",
     "modalIcons": [
       "FigmaIcon",
       "PremiereIcon",
@@ -22,7 +22,7 @@
     "description": "Recherche, Développement, déploiement",
     "imageSrc": "images/Ordinateur-Adami.webp",
     "modalTitle": "Développement",
-    "modalDescription": "Un site/application qui correspond à votre image et vos besoins.",
+    "modalDescription": "Création, développement et conception de votre site web/application",
     "modalIcons": [
       "HtmlIcon",
       "CssIcon",
@@ -40,11 +40,11 @@
   },
   {
     "id": 3,
-    "title": "Jeux vidéos",
+    "title": "jeux vidéos & UI Design",
     "description": "Conception, développement, test",
     "imageSrc": "images/Homme-Ordinateur-unity.webp",
-    "modalTitle": "Développement jeux vidéos",
-    "modalDescription": "Mini-jeux pour votre site web/application afin de vous démarquer",
+    "modalTitle": "Développement jeux vidéos & UI Design",
+    "modalDescription": "Création de mini-jeux interactifs pensés pour améliorer l’expérience utilisateur et capter l’attention.",
     "modalIcons": [
       "CSharpIcon",
       "UnityIcon",
