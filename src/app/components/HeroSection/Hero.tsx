@@ -144,15 +144,15 @@ const Hero: React.FC = () => {
           <button aria-label="Contactez-moi par email" onClick={link} className="btn flex items-center gap-2">
             Me contacter <EnvelopeIcon className="w-5" />
           </button>
-          <a
-            href="/documents/CV_2026_Concepteur_développeur_d'application.pdf"
-            download="CV_2026_Développeur_concepteur_application.pdf"
-          >
-            <div className="flex items-center gap-1">
-              <span>Mon CV</span>
-              <ArrowDownTrayIcon className="w-6 animate-pulse " />
-            </div>
-          </a>
+          {/*<a*/}
+          {/*  href="/documents/CV_2026_Concepteur_développeur_d'application.pdf"*/}
+          {/*  download="CV_2026_Développeur_concepteur_application.pdf"*/}
+          {/*>*/}
+          {/*  <div className="flex items-center gap-1">*/}
+          {/*    <span>Mon CV</span>*/}
+          {/*    <ArrowDownTrayIcon className="w-6 animate-pulse " />*/}
+          {/*  </div>*/}
+          {/*</a>*/}
         </div>
       </div>
     </div>
