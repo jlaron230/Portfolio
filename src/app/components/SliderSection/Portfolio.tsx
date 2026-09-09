@@ -102,23 +102,23 @@ const Portfolio: React.FC<alt> = ({alt}) => {
         alt={alt}
       />
 
-      {/* Composant pour le projet Medhylemme */}
+      {/* Composant pour le projet SkillNest */}
       <SkillNestComponent />
 
       {/* Section pour le troisième projet */}
       <ProjectSection
         index={2} // Troisième projet
-        title="Le Panchakarma"
-        logoVign="/images/Panchakarma/Logo panchaKarma.webp"
-        altLogoVign="Logo de l'institut le Panchakarma"
-        description="Le Panchakarma, offre une présentation claire de ses prestations..."
-        buttonHref="https://www.lepanchakarma.fr/"
+        title="Le Nécromancien"
+        logoVign="/images/LeNecromancien/Logo LeNecromancien.webp"
+        altLogoVign="Logo de la boutique du Nécromancien"
+        description="Boutique en ligne dédiée à l’univers gothique et ésotérique, proposant décoration, mode, beauté et objets spirituels dans une ambiance sombre et immersive."
+        buttonHref="https://www.lenecromancien.fr/"
         buttonText="Le projet"
         images={slider3}
         page={page3}
         direction={direction3}
         paginate={(direction) => paginate(3, direction)}
-        imageSrc={"/images/LePanchaKarma/LePanchakarmaCapture1.webp"}
+        imageSrc={"/images/LeNecromancien/LeNecromancien-1.webp"}
         noBackground={true}
         defilement={3}
         defilement2={-3}

@@ -6,7 +6,7 @@ import { Button, Link } from "@nextui-org/react";
 // Composant SkillNest
 const SkillNestComponent = () => {
   return (
-    <article className="Interlaptop:flex-row-reverse relative max-w-[1280px] flex flex-wrap gap-10 justify-center items-center my-36 h-96">
+    <article className="Interlaptop:flex-row-reverse relative max-w-[1280px] flex flex-wrap gap-10 justify-center items-center max-sm:my-28 sm:my-36 h-96">
       {/* Conteneur principal avec les styles de mise en page */}
       <motion.div
         className="text-white md:w-[75%] lg:w-[40%]"

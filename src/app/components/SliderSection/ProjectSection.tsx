@@ -47,7 +47,7 @@ const ProjectSection: React.FC<SectionType> = ({
   const returnProject = index % 2 === 0;
   
   return (
-    <article className={`relative max-w-[1280px] flex flex-wrap gap-10 justify-center items-center my-36 h-96 ${returnProject ? "flex-row" : "flex-row-reverse"} `}>
+    <article className={`relative max-w-[1280px] flex flex-wrap gap-10 justify-center items-center max-sm:my-28 sm:my-36 h-96 ${returnProject ? "flex-row" : "flex-row-reverse"} `}>
       {/* Conteneur pour le texte du projet */}
       <motion.div
         className="text-white md:w-[75%] lg:w-[40%]"

@@ -31,7 +31,7 @@ const Slider: React.FC<SliderProps> = ({ images, page, direction, paginate, defi
         }),
     };
   return (
-      <div className="relative overflow-hidden h-200 max-w-[41rem] rounded-large aspect-[16/9]">
+      <div className="relative overflow-hidden h-200 max-lg:max-w-[30rem] lg:max-w-[35rem] rounded-large lg:aspect-[16/9]">
           <AnimatePresence initial={true} custom={direction} mode="wait">
               {images.length > 0 && (
                   <motion.img

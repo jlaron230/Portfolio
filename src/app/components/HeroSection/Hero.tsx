@@ -136,7 +136,7 @@ const Hero: React.FC = () => {
         <h1 className="slide-in orbitron-h1">
           UI/UX Designer & Développeur Full-Stack
         </h1>
-        <p className="slide-in text-2xl">
+        <p className="slide-in max-sm:text-lg sm:text-2xl">
           Je conçois et développe des expériences digitales centrées utilisateur.
         </p>
         </div>
