@@ -4,6 +4,7 @@ import NavBarOverlay from "./components/NavBar/NavBarOverlay"; // Vérifie le ch
 import ClickScrollBar from "./components/ScrollBar/ClickScrollBar"; // Vérifie le chemin
 import Footer from "./components/footer/Footer"; // Vérifie le chemin
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -61,6 +62,7 @@ export default function RootLayout({
     <NavBarOverlay/>
     {children}
     <SpeedInsights />
+    <Analytics />
         <Footer />
       </body>
     </html>
