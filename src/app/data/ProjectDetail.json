@@ -1,0 +1,278 @@
+[
+  {
+    "id": 1,
+    "title": "Gestock",
+    "logoVign": "/images/GestockManager/Logo-Gestock.webp",
+    "altLogoVign": "Logo de Gestock manager",
+    "description": "Gestock est une application web de gestion de stock développée en full-stack permettant de gérer produits, fournisseurs et commandes via une interface intuitive et sécurisée...",
+    "buttonHref": "https://gestockmanager-desktop.vercel.app",
+    "buttonText": "Le projet",
+    "imageSrc": "/images/GestockManager/Logo-Gestock.webp",
+    "detailProject": {
+      "title": "Gestock Manager",
+      "category": [
+        "Application Web",
+        "Développement Full-Stack",
+        "UX/UI Design",
+        "Gestion de stock"
+      ],
+      "logo": "/images/GestockManager/LogoGestockWhite.webp",
+      "year": "2025",
+      "client": "Projet de formation",
+      "team": "Jérôme et Mael",
+      "description": "Gestock Manager est une application web de gestion de stock conçue pour faciliter le suivi des produits, des fournisseurs et des boutiques. Le projet comprend la conception des interfaces sous Figma, le développement d'une API REST avec Node.js et Express, ainsi que la gestion des données avec MySQL.\nL'objectif était de centraliser les informations dans une interface claire et fonctionnelle, avec un système d'authentification sécurisé, une gestion des sessions et une documentation des API avec Swagger. Le projet m'a permis de travailler sur l'ensemble du cycle de développement, de la conception UX/UI jusqu'au déploiement de l'application.",
+      "link": "https://gestockmanager-desktop.vercel.app/",
+      "backgroundColor": "bg-blue-secondary",
+      "nextProject": {
+        "link": "/ProjectDetail/2",
+        "title": "Adami Game",
+        "category": "Développement jeu vidéo"
+      },
+      "image": [
+        {
+          "images": [
+            "/images/GestockManager/Maquette/PageAccueil.webp",
+            "/images/GestockManager/Maquette/PageAjoutDeProduit.webp",
+            "/images/GestockManager/Maquette/Pagecommande.webp",
+            "/images/GestockManager/Maquette/PageDashboard.webp",
+            "/images/GestockManager/Maquette/PageListeDeProduits.webp",
+            "/images/GestockManager/Maquette/PageProfilDeProduit.webp"
+          ],
+          "desc": "Conception UX/UI & interfaces de gestion",
+          "backgroundColor": "bg-blue-secondary"
+        },
+        {
+          "images": [
+            "/images/GestockManager/Capture-accueil-1.webp",
+            "/images/GestockManager/Capture-accueil-2.webp",
+            "/images/GestockManager/Capture-commande-1.webp",
+            "/images/GestockManager/Capture-commande-2.webp",
+            "/images/GestockManager/Capture-Dashboard-1.webp",
+            "/images/GestockManager/Capture-produit-1.webp"
+          ],
+          "desc": "Développement & fonctionnalités métier",
+          "backgroundColor": "bg-blue-secondary"
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "title": "Adami Game",
+    "logoVign": "/images/Adami/Logo-Adami-Qualite2.webp",
+    "altLogoVign": "Logo du projet Adami Game",
+    "description": "Adami Game est un projet personnel de jeu vidéo développé sous Unity en C#. Il associe programmation, conception de mécaniques de jeu, level design et création d'interfaces pour proposer une expérience interactive.",
+    "buttonHref": "https://gamejolt.com/games/AdamiGame/851212",
+    "buttonText": "Découvrir le projet",
+    "imageSrc": "/images/Adami/Logo-Adami-Qualite2.webp",
+    "detailProject": {
+      "title": "Adami Game",
+      "category": [
+        "Jeu vidéo",
+        "Développement C#",
+        "Unity Engine",
+        "Game Design",
+        "UX/UI Design"
+      ],
+      "logo": "/images/Adami/Logo-Adami-Qualite2.webp",
+      "year": "2017 - Aujourd'hui",
+      "client": "Projet personnel",
+      "description": "Adami Game est un projet personnel de développement de jeu vidéo réalisé avec Unity Engine et C#. Il m'a permis d'explorer plusieurs aspects de la création vidéoludique, notamment la programmation orientée objet, l'intégration de mécaniques de gameplay, le level design et la conception d'interfaces utilisateur.\nAu-delà du développement, le projet comprend également une dimension créative et collaborative, avec des phases de bêta-test, la présentation du jeu lors de concours et sa promotion sur les réseaux sociaux. L'objectif est de construire une expérience interactive cohérente, en associant programmation, conception visuelle et retours des joueurs.",
+      "link": "https://gamejolt.com/games/AdamiGame/851212",
+      "backgroundColor": "bg-black",
+      "nextProject": {
+        "link": "/ProjectDetail/3",
+        "title": "SkillNest",
+        "category": "EdTech - UX/UI Design & Développement"
+      },
+      "image": [
+        {
+          "images": [
+            "/images/Adami/InGame/Capture - Adès ville.webp",
+            "/images/Adami/InGame/Capture Citrouille.webp",
+            "/images/Adami/Adami-Capture2.webp",
+            "/images/Adami/InGame/Capture-Level-Design.webp",
+            "/images/Adami/InGame/Capture-GameObject.webp"
+          ],
+          "desc": "Game Design & conception des niveaux",
+          "backgroundColor": "black"
+        },
+        {
+          "images": [
+            "/images/Adami/InGame/Capture-PlayerStats.webp",
+            "/images/Adami/InGame/Capture-Weapons.webp",
+            "/images/Adami/InGame/Capture-Architecture.webp",
+            "/images/Adami/InGame/Animation.webp"
+          ],
+          "desc": "Développement & mécaniques de jeu",
+          "backgroundColor": "black"
+        },
+        {
+          "images": [
+            "/images/Adami/InGame/Interface-utilisateur-Menu.webp",
+            "/images/Adami/InGame/Menu-Paramètre-Audio.webp",
+            "/images/Adami/InGame/Menu-Paramètres-Raccourcis.webp"
+          ],
+          "desc": "Interfaces & expérience joueur",
+          "backgroundColor": "black"
+        },
+        {
+          "images": [
+            "/images/Adami/InGame/Capture - qualité élevé insta.webp",
+            "/images/Adami/InGame/Capture - gobelin des souterrains de Dévon.webp",
+            "/images/Adami/InGame/Panel complet Adami.webp",
+            "/images/Adami/InGame/Capture-Combat.jpg",
+            "/images/Adami/InGame/Capture-mission.jpg"
+          ],
+          "desc": "Gameplay & univers du jeu",
+          "backgroundColor": "black"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "title": "SkillNest School",
+    "logoVign": "/images/SkillNest/Logo-SkillNest.webp",
+    "altLogoVign": "Logo de SkillNest School",
+    "description": "SkillNest School est une plateforme éducative destinée aux collégiens et lycéens, conçue pour proposer un accompagnement personnalisé, accessible et inclusif. Le projet associe développement web, UX/UI Design et innovation pédagogique.",
+    "buttonHref": "https://www.skillnest.fr/",
+    "buttonText": "Découvrir le projet",
+    "imageSrc": "/images/SkillNest/Logo-SkillNest.webp",
+    "detailProject": {
+      "title": "SkillNest School",
+      "category": [
+        "EdTech",
+        "Développement Web",
+        "UX/UI Design",
+        "Product Design",
+        "Entrepreneuriat"
+      ],
+      "logo": "/images/SkillNest/SkillNest-black.webp",
+      "year": "2023 - Aujourd'hui",
+      "client": "Projet entrepreneurial",
+      "description": "SkillNest School est une plateforme éducative que j'ai cofondée afin d'accompagner les collégiens et lycéens dans leur apprentissage, leur organisation et leur progression scolaire. Le projet vise à proposer une expérience personnalisée et inclusive, adaptée notamment aux élèves présentant des besoins éducatifs particuliers.\nEn tant que cofondateur, je participe à la conception du produit, à la recherche UX/UI et à la réalisation de maquettes et prototypes sous Figma. J'interviens également sur le développement d'interfaces web responsive avec Next.js, React et TypeScript, ainsi que sur l'identité visuelle et la communication digitale.\nLe projet s'appuie sur une démarche centrée utilisateur, comprenant des questionnaires, des échanges avec les élèves et des tests permettant de faire évoluer progressivement les fonctionnalités et l'expérience proposée.",
+      "link": "https://www.skillnest.fr/",
+      "backgroundColor": "bg-neutral-color",
+      "nextProject": {
+        "link": "/ProjectDetail/4",
+        "title": "Le Nécromancien",
+        "category": "Création de l'univers visuel"
+      },
+      "image": [
+        {
+          "images": [
+            "/images/SkillNest/Projet-SkillNest-Wireframe-Desktop_page-0003.webp",
+            "/images/SkillNest/Projet-SkillNest-Wireframe-Desktop_page-0004.webp",
+            "/images/SkillNest/Projet-SkillNest-Wireframe-Desktop_page-0008.webp",
+            "/images/SkillNest/Projet-SkillNest-Wireframe-Desktop_page-00011.webp",
+            "/images/SkillNest/Maquette-primary.webp"
+          ],
+          "desc": "De la recherche utilisateur à l'interface",
+          "backgroundColor": "bg-neutral-color"
+        },
+        {
+          "images": [
+            "/images/SkillNest/SkillNest-Onboarding-user.webp"
+          ],
+          "desc": "Une expérience pensée pour chaque élève",
+          "backgroundColor": "bg-neutral-gray"
+        },
+        {
+          "images": [
+            "/images/SkillNest/Design-System/Application-Font.webp",
+            "/images/SkillNest/Design-System/Type-Police.webp",
+            "/images/SkillNest/Design-System/Spacing.webp",
+            "/images/SkillNest/Design-System/Spacing-element.webp",
+            "/images/SkillNest/Design-System/Brand-Color.webp",
+            "/images/SkillNest/Design-System/Form-Field.webp",
+            "/images/SkillNest/Design-System/Illustration.webp",
+            "/images/SkillNest/Design-System/PersonCard.webp",
+            "/images/SkillNest/Design-System/Pill Button.webp",
+            "/images/SkillNest/Design-System/Avatar.webp"
+          ],
+          "desc": "Design System & identité visuelle",
+          "backgroundColor": "white"
+        },
+        {
+          "images": [
+            "/images/SkillNest/SkillNest-Interface-Application.webp"
+          ],
+          "desc": "Du prototype au produit",
+          "backgroundColor": "bg-neutral-gray"
+        }
+        ]
+    }
+  },
+  {
+    "id": 4,
+    "title": "Le Nécromancien",
+    "logoVign": "/images/LeNecromancien/Logo LeNecromancien.webp",
+    "altLogoVign": "Logo de la boutique du Nécromancien",
+    "description": "Boutique en ligne dédiée à l’univers gothique et ésotérique, proposant décoration, mode, beauté et objets spirituels dans une ambiance sombre et immersive.",
+    "buttonHref": "https://www.lenecromancien.fr/",
+    "buttonText": "Le projet",
+    "imageSrc": "/images/LeNecromancien/Logo LeNecromancien.webp",
+    "detailProject": {
+      "title": "Le Nécromancien",
+      "category": ["E-commerce", "Webdesign", "UX/UI Design", "Identité visuelle"],
+      "year": "2026",
+      "client": "Le Nécromancien",
+      "description": "Création de l'univers visuel et digital du Nécromancien, une marque spécialisée dans les produits et créations d'inspiration gothique et ésotérique. Le projet comprend la conception d'une boutique e-commerce sous Wix Studio, la création de son identité visuelle et l'amélioration de l'expérience utilisateur.\nL'objectif était de proposer une boutique cohérente avec l'univers de la marque, tout en facilitant la navigation, la découverte des produits et le parcours d'achat.",
+      "link": "https://www.lenecromancien.fr",
+      "backgroundColor": "bg-black",
+      "logo": "/images/LeNecromancien/Logo LeNecromancien.webp",
+      "nextProject": {
+        "link": "/ProjectDetail/1",
+        "title": "Gestock Manager",
+        "category": "Développement, application web"
+      },
+      "image": [
+        {
+          "images": [
+            "/images/LeNecromancien/FlyerA7-Le Nécromancien-LeNécromancien-10-2026-Recto.webp",
+            "/images/LeNecromancien/FlyerA7-LeNécromancien-LeNécromancien-10-2026-Verso.webp",
+            "/images/LeNecromancien/Cartedevisite85-55mm.webp"
+          ],
+          "desc": "Identité visuelle & direction artistique",
+          "backgroundColor": "bg-black"
+        },
+        {
+          "images": [
+            "/images/LeNecromancien/BoutiqueLeNecromancien_page-0001.webp"
+          ],
+          "desc": "Conception web - Page d'Accueil",
+          "backgroundColor": "bg-black"
+        },
+        {
+          "images": [
+            "/images/LeNecromancien/BoutiqueLeNecromancien_page-0002.webp"
+          ],
+          "desc": "Page Boutique",
+          "backgroundColor": "bg-black"
+        },
+        {
+          "images": [
+            "/images/LeNecromancien/BoutiqueLeNecromancien_page-0003.webp"
+          ],
+          "desc": "Page Décoration",
+          "backgroundColor": "bg-black"
+        },
+        {
+          "images": [
+            "/images/LeNecromancien/BoutiqueLeNecromancien_page-0004.webp"
+          ],
+          "desc": "Page Articles",
+          "backgroundColor": "bg-black"
+        },
+        {
+          "images": [
+            "/images/LeNecromancien/BoutiqueLeNecromancien_page-0005.webp"
+          ],
+          "desc": "Page Produit",
+          "backgroundColor": "bg-black"
+        }
+      ]
+    }
+  }
+]

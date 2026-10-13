@@ -45,7 +45,7 @@ const ProjectSection: React.FC<SectionType> = ({
 }) => {
   // Détermine la direction de l'affichage des projets (pour alterner les positions)
   const returnProject = index % 2 === 0;
-  
+  console.log("Lien projet :", buttonHref);
   return (
     <article className={`relative max-w-[1280px] flex flex-wrap gap-10 justify-center items-center max-sm:my-28 sm:my-36 h-96 ${returnProject ? "flex-row" : "flex-row-reverse"} `}>
       {/* Conteneur pour le texte du projet */}
@@ -62,7 +62,6 @@ const ProjectSection: React.FC<SectionType> = ({
         <p>{description}</p>
         <div className="flex">
           <Button
-            target="blank"
             href={buttonHref}
             as={Link}
             showAnchorIcon

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import data from "../../data/images.json";
 import ProjectSection from "./ProjectSection";
 import SkillNestComponent from "./SkillNestComponent";
+import ProjectDetail from "../../data/ProjectDetail.json"
 
 // Interface pour typer les données du slider
 interface SliderData {
@@ -15,7 +16,7 @@ interface alt {
   alt: string;
 }
 
-const Portfolio: React.FC<alt> = ({alt}) => {
+const Portfolio = ({alt}: alt) => {
   // États pour gérer la page actuelle et la direction du slider pour chaque slider
   const [page1, setPage1] = useState<number>(0);
   const [direction1, setDirection1] = useState<number>(0);
@@ -42,6 +43,19 @@ const Portfolio: React.FC<alt> = ({alt}) => {
     }
   }, []);
 
+  //Attribuer le bon id a la variable définit
+  const projectGestock = ProjectDetail.find(
+      project => project.id === 1
+  );
+
+  const projectAdami = ProjectDetail.find(
+      project => project.id === 2
+  );
+
+  const projectNecromancien = ProjectDetail.find(
+      project => project.id === 4
+  );
+
   // Fonction pour gérer la pagination du slider
   const paginate = (slider: number, direction: number) => {
     if (slider === 1) {
@@ -64,66 +78,72 @@ const Portfolio: React.FC<alt> = ({alt}) => {
       </div>
       
       {/* Section pour le premier projet */}
+      {projectGestock && (
       <ProjectSection
-        index={0} // Premier projet
-        title="Gestock"
-        logoVign="/images/GestockManager/Logo-Gestock.webp"
-        altLogoVign="Logo de Gestock manager"
-        description="Gestock est une application web de gestion de stock développée en full-stack permettant de gérer produits, fournisseurs et commandes via une interface intuitive et sécurisée..."
-        buttonHref="https://gestockmanager-desktop.vercel.app"
-        buttonText="Le projet"
+        index={projectGestock.id} // Premier projet
+        title={projectGestock.title}
+        logoVign={projectGestock.logoVign}
+        altLogoVign={projectGestock.altLogoVign}
+        description={projectGestock.description}
+        buttonHref={`/ProjectDetail/${projectGestock.id}`}
+        buttonText={projectGestock.buttonText}
         images={slider1}
         page={page1}
         direction={direction1}
         paginate={(direction) => paginate(1, direction)}
-        imageSrc="/images/GestockManager/Logo-Gestock.webp"
+        imageSrc={projectGestock.imageSrc}
         defilement={1}
         defilement2={-1}
         alt={alt}
       />
+      )}
 
       {/* Section pour le deuxième projet */}
+      {projectAdami && (
       <ProjectSection
-        index={1} // Deuxième projet
-        title="Adami"
-        logoVign="/images/Adami/Adami-logo.webp"
-        altLogoVign="Logo du jeu vidéo Adami"
-        description="Plongez dans l'univers d'Adami, un RPG médiéval-fantastique à la première personne..."
-        buttonHref="https://gamejolt.com/games/AdamiGame/851212"
-        buttonText="Le projet"
+        index={projectAdami.id} // Deuxième projet
+        title={projectAdami.title}
+        logoVign={projectAdami.logoVign}
+        altLogoVign={projectAdami.altLogoVign}
+        description={projectAdami.description}
+        buttonHref={`/ProjectDetail/${projectAdami.id}`}
+        buttonText={projectAdami.buttonText}
         images={slider2}
         page={page2}
         direction={direction2}
         paginate={(direction) => paginate(2, direction)}
-        imageSrc="/images/Adami/Adami-Capture5.webp"
+        imageSrc={projectAdami.imageSrc}
         noBackground={false}
         defilement={2}
         defilement2={-2}
         alt={alt}
       />
+      )}
 
       {/* Composant pour le projet SkillNest */}
       <SkillNestComponent />
 
       {/* Section pour le troisième projet */}
+      {projectNecromancien && (
       <ProjectSection
-        index={2} // Troisième projet
-        title="Le Nécromancien"
-        logoVign="/images/LeNecromancien/Logo LeNecromancien.webp"
-        altLogoVign="Logo de la boutique du Nécromancien"
-        description="Boutique en ligne dédiée à l’univers gothique et ésotérique, proposant décoration, mode, beauté et objets spirituels dans une ambiance sombre et immersive."
-        buttonHref="https://www.lenecromancien.fr/"
-        buttonText="Le projet"
+        index={projectNecromancien.id} // Troisième projet
+        title={projectNecromancien.title}
+        logoVign={projectNecromancien.logoVign}
+        altLogoVign={projectNecromancien.altLogoVign}
+        description={projectNecromancien.description}
+        buttonHref={`/ProjectDetail/${projectNecromancien.id}`}
+        buttonText={projectNecromancien.buttonText}
         images={slider3}
         page={page3}
         direction={direction3}
         paginate={(direction) => paginate(3, direction)}
-        imageSrc={"/images/LeNecromancien/LeNecromancien-1.webp"}
+        imageSrc={projectNecromancien.imageSrc}
         noBackground={true}
         defilement={3}
         defilement2={-3}
         alt={alt}
       />
+      )}
     </div>
   );
 };

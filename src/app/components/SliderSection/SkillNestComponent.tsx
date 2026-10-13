@@ -2,9 +2,15 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import { Button, Link } from "@nextui-org/react";
+import ProjectDetail from "../../data/ProjectDetail.json"
 
 // Composant SkillNest
 const SkillNestComponent = () => {
+
+    const projectSkillNest = ProjectDetail.find(
+        project => project.id === 3
+    );
+
   return (
     <article className="Interlaptop:flex-row-reverse relative max-w-[1280px] flex flex-wrap gap-10 justify-center items-center max-sm:my-28 sm:my-36 h-96">
       {/* Conteneur principal avec les styles de mise en page */}
@@ -23,9 +29,10 @@ const SkillNestComponent = () => {
             pour collégiens et lycéens, conçue pour identifier leurs talents et les guider vers leur avenir... <span className="colorSecondary">(En cours de développement)</span>
         </p>
         <div className="flex ">
+            {projectSkillNest && (
           <Button
             target="blank"
-            href="https://www.skillnest.fr/"
+            href={`/ProjectDetail/${projectSkillNest.id}`}
             as={Link}
             showAnchorIcon
             variant="solid"
@@ -34,6 +41,7 @@ const SkillNestComponent = () => {
           >
             Le projet
           </Button>
+            )}
         </div>
       </motion.div>
 
