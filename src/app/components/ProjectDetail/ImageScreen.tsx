@@ -3,7 +3,7 @@ import Image from "next/image";
 interface ImageDetail {
     images?: string[];
     desc?: string;
-    backgroundColor1?: string
+    backgroundColor?: string
 }
 
 interface imageItem {
