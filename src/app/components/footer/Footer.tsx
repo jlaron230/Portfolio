@@ -120,7 +120,7 @@ const Footer = () => {
     });
 
     return (
-        <div id="Contact" className="flex flex-col items-center justify-center w-full bg-black p-12 text-white">
+        <div id="Contact" className="rounded-t-footer bg-gradient-waves flex flex-col items-center justify-center w-full bg-black p-12 text-white">
             <h2 className="pb-12">Contactez-moi</h2>
             <ScrollToTop />
             <form onSubmit={formik.handleSubmit} className="sm:w-6/12 lg:w-4/12 w-full">

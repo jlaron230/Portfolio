@@ -4,6 +4,9 @@ import CardModal from './../ServiceCards/CardsModal';
 import { Card, CardHeader } from '@nextui-org/react';
 import { motion } from 'framer-motion';
 import Image from "next/image";
+import data from "../../data/CardsInfos.json"
+import IconComponent from "@/app/components/ServiceCards/IconComponent";
+import {ArrowRightCircleIcon, ChevronRightIcon} from "@heroicons/react/16/solid";
 // Interface pour définir les props attendues dans CardComponent
 interface cardInterface {
   id: number;
@@ -18,12 +21,15 @@ interface cardInterface {
   color: string;
   modalDescription: string;
   baliseAlt: string;
+  icon: string
 }
 
 // Composant de chaque carte individuelle
 const CardComponent: React.FC<cardInterface> = React.memo (({
-  id, title, description, imageSrc, modalTitle, modalDescription, modalIcons, showModal, handleShowModal, currentCard, color, baliseAlt
+  id, icon, title, description, imageSrc, modalTitle, modalDescription, modalIcons, showModal, handleShowModal, currentCard, color, baliseAlt
 }) => {
+
+  const skill = data.find((skills) => skills.id === id)
 
   return (
         <motion.button
@@ -44,11 +50,29 @@ const CardComponent: React.FC<cardInterface> = React.memo (({
             {/* Carte affichant le titre, description et l'image */}
             <Card className="relative w-full h-full col-span-12 sm:col-span-4">
               {/* Header de la carte contenant le titre et la description */}
-              <CardHeader className="pointer-events-none font-bold absolute z-10 top-1 flex-col !items-start flex content-center flex-wrap">
-                <h4 className="text-white text-4xl">{title}</h4>
-                <p className="text-white uppercase font-bold text-lg">{description}</p>
+              <CardHeader className=" !block md:gap-2 pointer-events-none font-bold absolute z-10 top-1 flex-col !items-start flex content-center flex-wrap">
+                <div className="mb-8">
+                <div className="w-16 text-white">
+                  {skill && <IconComponent icon={skill.icon} /> }
+                </div>
+                <div className="flex max-sm:flex-col sm:flex-wrap text-left gap-2">
+                <h4 className="text-white text-2xl">{title}</h4>
+                <p className="text-white uppercase text-base">{description}</p>
+                </div>
+                </div>
               </CardHeader>
 
+              {/* Flèche fixée en bas à gauche */}
+              <ArrowRightCircleIcon
+                  className="absolute
+                            bottom-4
+                            left-4
+                            z-20
+                            w-8
+                            h-8
+                            text-white
+                            pointer-events-none"
+              />
               {/* Image de fond de la carte */}
               <div
                   className="pointer-events-none relative w-full h-[20rem] sm:h-[25rem] md:h-[26rem] lg:h-[19rem] xl:h-[18rem] bg-black">
@@ -61,7 +85,7 @@ const CardComponent: React.FC<cardInterface> = React.memo (({
                     style={{ contain: "paint" }} // limite le recalcule améliore le coutde repaint Spécifiquement recommandé pour images LCP animées
                     fetchPriority={id === 1 ? "high" : "auto"} //Priorise la promesse en fonction de l'id de l'image
                     alt={baliseAlt} // Texte alternatif pour l'image
-                    className="z-0 absolute top-0 left-0 w-full h-full object-cover opacity-85"
+                    className="z-0 absolute top-0 left-0 w-full h-full object-cover opacity-55"
                     src={`/${imageSrc}`}
                     sizes="(max-width: 600px) 600px, 1200px"
                 />

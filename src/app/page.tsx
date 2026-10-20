@@ -12,13 +12,13 @@ export default function Home() {
     <NextUIProvider>
       <Hero />
       <main className="flex min-h-screen flex-col items-center justify-between ">
-        <section className="w-full p-12 mb-12">
+        <section className="w-full max-sm:p-2 max-sm:pt-12 sm:p-12 mb-12">
           <ServiceProjet />
         </section>
-        <section className="w-full bg-black p-12 mb-12">
+        <section className="w-full bg-gradient-waves rounded-t-large p-12 mb-12">
           <Projet />
         </section>
-        <section className="p-12 mb-12 w-full">
+        <section className="p-12 w-full">
           <Experiences />
         </section>
         <section className="p-12 mb-12 w-full">

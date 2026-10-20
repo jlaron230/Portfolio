@@ -20,12 +20,13 @@ const Cards = () => {
   return (
     <>
       {/* Titre de la section */}
-      <div className="pb-12 text-center">
+      <div className="pb-12 text-center flex-col items-center flex">
         <h2>SERVICES</h2>
+          <hr className="!border-blue-800 border-t head-separator w-24" />
       </div>
 
       {/* Grille d'affichage des cartes avec une configuration réactive */}
-      <div className="max-w-[900px] gap-2 grid lg:grid-cols-12 sm:grid-cols-8 grid-rows-2 mr-auto ml-auto">
+      <div className="md:gap-4 max-w-[900px] gap-2 grid lg:grid-cols-12 sm:grid-cols-8 grid-rows-2 mr-auto ml-auto">
           {/* Parcours des données des cartes depuis CardsInfos.json */}
           {CardsInfos.map(({
                              id,
@@ -36,7 +37,8 @@ const Cards = () => {
                              modalDescription,
                              modalIcons,
                              color,
-                             baliseAlt
+                             baliseAlt,
+                             icon
                            }) => (
               <CardComponent
                   key={id} // Clé unique pour chaque carte
@@ -52,6 +54,7 @@ const Cards = () => {
                   currentCard={currentCard} // Passe la carte actuelle sélectionnée
                   color={color}
                   baliseAlt={baliseAlt}
+                  icon={icon}
               />
             ))}
       </div>

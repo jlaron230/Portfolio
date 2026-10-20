@@ -8,7 +8,7 @@ const VideoComponent = () => {
           loop
           muted
           playsInline
-          className="video-background"
+          className="video-background rounded-b-large"
           width="100%"
           height="auto"
           preload="none"

@@ -45,7 +45,7 @@ const Slider: React.FC<SliderProps> = ({ images, page, direction, paginate, defi
                       animate="center"
                       exit="exit"
                       transition={{
-                          duration: 0.75,
+                          duration: 0.3,
                           ease: [0.16, 1, 0.3, 1], // easing Splide / Apple
                       }}
                       drag="x"

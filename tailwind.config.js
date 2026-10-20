@@ -1,6 +1,6 @@
 // tailwind.config.js
 const { nextui } = require("@nextui-org/react");
-
+const daisyui = require("daisyui");
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",    // Inclut les pages Next.js
@@ -39,5 +39,5 @@ module.exports = {
     },
   },
   darkMode: "class", // Active le mode sombre basé sur une classe
-  plugins: [nextui()], // Ajoute le plugin NextUI
+  plugins: [nextui(), daisyui,], // Ajoute le plugin NextUI
 };

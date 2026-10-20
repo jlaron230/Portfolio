@@ -73,8 +73,9 @@ const Portfolio = ({alt}: alt) => {
   return (
     <div className="flex flex-col items-center justify-center">
       {/* Titre de la section des projets */}
-      <div className="flex text-white justify-center pb-12">
+      <div className="flex text-white justify-center pb-12 flex-col items-center flex gap-4">
         <h2>Mes projets</h2>
+        <hr className="!border-blue-800 border-t head-separator w-24" />
       </div>
       
       {/* Section pour le premier projet */}

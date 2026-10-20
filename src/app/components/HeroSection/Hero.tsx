@@ -121,18 +121,18 @@ const Hero: React.FC = () => {
   }, [isVideoPlaying]);
 
   return (
-    <div id="Accueil" className="hero-container">
-      <div className="background-video">
+    <div id="Accueil" className="hero-container rounded-b-large">
+      <div className="background-video rounded-b-large">
       <VideoComponent />
       </div>
 
       <div id="particles-container" className="particles-container"></div>
 
-      <div className="content flex flex-col items-center">
+      <div className="content flex flex-col items-center max-sm:gap-4">
         <p className="hero-container_txt hero_font_title_orbitron ">
           Jérôme Gavino
         </p>
-        <div className="flex flex-col items-center gap-1">
+        <div className="flex flex-col items-center sm:gap-4 max-sm:gap-1">
         <h1 className="slide-in orbitron-h1">
           UI/UX Designer & Développeur Full-Stack
         </h1>
