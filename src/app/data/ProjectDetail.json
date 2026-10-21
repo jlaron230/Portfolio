@@ -155,6 +155,7 @@
       "description": "SkillNest School est une plateforme éducative que j'ai cofondée afin d'accompagner les collégiens et lycéens dans leur apprentissage, leur organisation et leur progression scolaire. Le projet vise à proposer une expérience personnalisée et inclusive, adaptée notamment aux élèves présentant des besoins éducatifs particuliers.\nEn tant que cofondateur, je participe à la conception du produit, à la recherche UX/UI et à la réalisation de maquettes et prototypes sous Figma. J'interviens également sur le développement d'interfaces web responsive avec Next.js, React et TypeScript, ainsi que sur l'identité visuelle et la communication digitale.\nLe projet s'appuie sur une démarche centrée utilisateur, comprenant des questionnaires, des échanges avec les élèves et des tests permettant de faire évoluer progressivement les fonctionnalités et l'expérience proposée.",
       "link": "https://www.skillnest.fr/",
       "backgroundColor": "bg-neutral-color",
+      "video": ["https://youtube.com/embed/OxtJJ7Xbaug"],
       "nextProject": {
         "link": "/ProjectDetail/4",
         "title": "Le Nécromancien",

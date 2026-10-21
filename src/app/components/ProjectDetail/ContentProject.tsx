@@ -8,6 +8,7 @@ import ImageScreen from "@/app/components/ProjectDetail/ImageScreen";
 import NextProject from "@/app/components/ProjectDetail/NextProject";
 import LocomotiveScroll from 'locomotive-scroll';
 import {useEffect} from "react";
+import VideoProject from "@/app/components/ProjectDetail/VideoProject";
 
 interface ProjectData {
     detailProject: projectDetail;
@@ -28,6 +29,7 @@ interface projectDetail {
     nextProject?: nextProjectDetail;
     backgroundColor?: string;
     logo?: string;
+    video?: string[];
 }
 
 interface idDetailImageArray {
@@ -60,6 +62,7 @@ const ContentProject= ({id}: ProjectId) => {
             <TitleProject title={project.detailProject.title} />
            <DescriptionProject team={project.detailProject.team} client={project.detailProject.client} year={project.detailProject.year} category={project.detailProject.category} description={project.detailProject.description} link={project.detailProject.link} />
            <ImageScreen image={project.detailProject.image} />
+           <VideoProject video={project.detailProject.video} />
            <NextProject link={project.detailProject.nextProject?.link} category={project.detailProject.nextProject?.category} title={project.detailProject.nextProject?.title}/>
        </div>
     )

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import React from "react";
 
 interface ImageDetail {
     images?: string[];
@@ -28,7 +29,7 @@ const ImageScreen = ({image}:imageItem) => {
                                      className={`project-content-wrapper ${section.backgroundColor || section.backgroundColor}`}>
                                     <Image fill src={img}
                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw"
-                                           alt="Image" className="!relative object-contain p-6  w-full h-full"/>
+                                           alt="Image" className="!relative object-contain max-sm:p-1 sm:p-6  w-full h-full"/>
                                 </div>
                             ))}
                         </div>

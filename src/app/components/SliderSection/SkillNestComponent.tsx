@@ -3,6 +3,7 @@ import React from 'react'
 import { motion } from "framer-motion";
 import { Button, Link } from "@nextui-org/react";
 import ProjectDetail from "../../data/ProjectDetail.json"
+import {ArrowUpRight} from "lucide-react";
 
 // Composant SkillNest
 const SkillNestComponent = () => {
@@ -30,17 +31,27 @@ const SkillNestComponent = () => {
         </p>
         <div className="flex ">
             {projectSkillNest && (
-          <Button
-            target="blank"
-            href={`/ProjectDetail/${projectSkillNest.id}`}
-            as={Link}
-            showAnchorIcon
-            variant="solid"
-            className="mt-2 colorSecondary text-white z-10"
-            aria-label='Application SkillNest de soutien scolaire'
-          >
-            Le projet
-          </Button>
+
+                <div className="flex mt-2">
+                    <Link
+                        href={`/ProjectDetail/${projectSkillNest.id}`}
+                        className="
+      colorSecondary
+      relative z-10
+      inline-flex items-center justify-center gap-3
+      rounded-xl px-6 py-3
+      text-white font-medium
+      transition-all duration-200
+      hover:brightness-110
+      focus-visible:outline-2
+      focus-visible:outline-offset-4
+      focus-visible:outline-blue-500
+    "
+                    >
+                        Le projet
+                        <ArrowUpRight size={18} aria-hidden="true" />
+                    </Link>
+                </div>
             )}
         </div>
       </motion.div>

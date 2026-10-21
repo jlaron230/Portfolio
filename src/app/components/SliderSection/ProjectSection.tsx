@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Link, Button } from "@nextui-org/react";
 import Slider from "./Slider";
 import Image from "next/image";
+import {ArrowUpRight} from "lucide-react";
 
 // Interface pour les props du composant ProjectSection
 interface SectionType {
@@ -45,7 +46,6 @@ const ProjectSection: React.FC<SectionType> = ({
 }) => {
   // Détermine la direction de l'affichage des projets (pour alterner les positions)
   const returnProject = index % 2 === 0;
-  console.log("Lien projet :", buttonHref);
   return (
     <article className={`relative max-w-[1280px] flex flex-wrap gap-10 justify-center items-center max-sm:my-28 sm:my-36 h-96 ${returnProject ? "flex-row" : "flex-row-reverse"} `}>
       {/* Conteneur pour le texte du projet */}
@@ -60,17 +60,28 @@ const ProjectSection: React.FC<SectionType> = ({
           <img className="(max-width: 200px) w-full h-full object-cover" src={logoVign} alt={altLogoVign} />
         </div>
         <p>{description}</p>
-        <div className="flex">
-          <Button
-            href={buttonHref}
-            as={Link}
-            showAnchorIcon
-            variant="solid"
-            className="mt-2 colorSecondary text-white z-10"
+
+        <div className="flex mt-2">
+          <Link
+              href={buttonHref}
+              className="
+      colorSecondary
+      relative z-10
+      inline-flex items-center justify-center gap-3
+      rounded-xl px-6 py-3
+      text-white font-medium
+      transition-all duration-200
+      hover:brightness-110
+      focus-visible:outline-2
+      focus-visible:outline-offset-4
+      focus-visible:outline-blue-500
+    "
           >
             {buttonText}
-          </Button>
+            <ArrowUpRight size={18} aria-hidden="true" />
+          </Link>
         </div>
+
       </motion.div>
 
       {/* Affiche l'image de fond si noBackground est faux */}
